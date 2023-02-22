@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+ <link rel="stylesheet" href="../dist/output.css">
+ 
+</head>
+<body>
+    <div class="container mx-auto">
+        <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+            <form>
+              <div class="form-group mb-6">
+                <label for="exampleInputEmail1" class="form-label inline-block mb-2 text-gray-700">Email Date</label>
+                <input type="text" class="form-control
+                  block
+                  w-full
+                  px-3
+                  py-1.5
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="userDate"
+                  aria-describedby="emailHelp" placeholder="MM/DD/YYYY">
+              </div>
+
+              <button type="submit" class="
+                px-6
+                py-2.5
+                bg-blue-600
+                text-white
+                font-medium
+                text-xs
+                leading-tight
+                uppercase
+                rounded
+                shadow-md
+                hover:bg-blue-700 hover:shadow-lg
+                focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+                active:bg-blue-800 active:shadow-lg
+                transition
+                duration-150
+                ease-in-out" onclick="validateDate()">Submit</button>
+            </form>
+          </div>
+    </div>
+    <script>
+       function validateDate(e) {
+        event.preventDefault();
+        var dateValue = document.getElementById("userDate").value ;
+
+        if(!dateValue.match(/^(0?[1-9]|1[0-2])[\/](0?[1-9]|[1-2][0-9]|3[01])[\/]\d{4}$/)){
+            alert("Enter valid date");
+        }
+        else {
+            let dateDigits = dateValue.split('/');
+            let month = parseInt(dateDigits[0]);
+            let day = parseInt(dateDigits[1]);
+            let year = parseInt(dateDigits[2]);
+            if (month == 2 && day >29){
+                alert("this month have only 29 days");
+            }else if((month == 2 && day >28)&& !(year % 4 == 0)){
+                alert("this year is not a leap year");
+            }
+            else if((month % 2 != 0) && day>30){
+                alert("this month have only 30 days");
+            }
+            else{
+                alert("this is valid date");
+            }
+        }
+       }
+    </script>   
+</body>
+</html>
+

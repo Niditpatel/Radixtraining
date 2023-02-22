@@ -1,0 +1,7 @@
+div {
+    width: 200px;
+    border: 2px solid red;
+    /* add a padding  */
+    padding: 25px;
+  }
+  

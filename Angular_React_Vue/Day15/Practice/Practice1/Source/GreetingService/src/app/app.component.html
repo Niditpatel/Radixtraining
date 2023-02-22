@@ -1,0 +1,7 @@
+<div>
+  <label for="name">Enter Your Name : </label>
+  <input type="text" [(ngModel)]="name" (input)="GreetUser()"  id="name">
+</div>
+<div>
+  <h2>{{greet}}</h2>
+</div>

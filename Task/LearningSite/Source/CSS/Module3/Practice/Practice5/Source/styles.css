@@ -1,0 +1,13 @@
+.flexbox {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .flexbox div {
+    background-color: rgb(89, 89, 241);
+    width: auto;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  

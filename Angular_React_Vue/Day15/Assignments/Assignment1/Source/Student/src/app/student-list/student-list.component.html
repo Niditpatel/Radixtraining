@@ -1,0 +1,11 @@
+<div class="my-5 mx-5">
+    <h1 class="text-5xl">Students : </h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2" >
+        <div class="my-2 bg-gray-200 text-2xl text-center" *ngFor="let item of list">
+            <p>Roll No. :  {{item.RollNo}}</p>
+            <p>Name :{{item.name}}</p>
+            <p>Grade:{{item.Grade}}</p>
+            <p>Fees:{{item.Fees}}</p>
+        </div>
+    </div>
+</div>

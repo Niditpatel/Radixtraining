@@ -1,0 +1,14 @@
+/* select h1 and p  */
+h1,
+p {
+  border: 2px solid blue;
+}
+ /* add a media query for making somg chage when 
+ user change device screen */
+@media only screen and (max-width: 500px) {
+  h1,
+  p {
+    /* now change the border color */
+    border: 2px solid red;
+  }
+}

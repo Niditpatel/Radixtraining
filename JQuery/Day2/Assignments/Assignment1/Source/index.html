@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <style>
+        .carousel .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MyStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item w-75 me-2 mt-3 my-sm-auto">
+                        <form class="d-flex  " role="search">
+                            <input class="form-control form-control-sm  " type="search" placeholder="Search"
+                                id="searchKey" aria-label="Search">
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " onclick="showCart()" href="#"><em
+                                class="fa-solid fa-cart-shopping"></em></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid " style="margin-top: 90px;">
+
+        <div class="d-flex justify-content-betweeen">
+            <div class="d-flex">
+                <label for="selectCategory" class="my-auto">Category</label>
+                <select name="" id="selectCategory" class="form-select ms-2">
+                    <option value="all">Show All</option>
+                    <option value="men's clothing">men's clothing </option>
+                    <option value="jewelery"> jewelery</option>
+                    <option value="electronics">electronics</option>
+                    <option value="women's clothing">women's clothing</option>
+                </select>
+            </div>
+            <button class="btn btn-primary ms-auto " data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"
+                style="display: inline-block; margin-left:auto;">Filter<em
+                    class="fa-solid fa-angle-down ms-1"></em></button>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-capitalize" id="offcanvasWithBothOptionsLabel">filter as per your
+                        choice</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="d-flex">
+                        <div class="w-50">
+                            <p class="text-capitalize">sort by price</p>
+                        </div>
+                        <div class="w-50">
+                            <span></span><input type="range" name="" id="priceRange" min="1" max="100"><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid " style="margin-top: 10px;">
+
+        <div class="row mt-3" id="output">
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: 'get',
+                dataType: 'json',
+                url: ' https://fakestoreapi.com/products',
+                success: function (data) {
+                    makecards(data);
+                    SearchProducts(data);
+                    filtercategory(data);
+                    sortBYPrice(data);
+                },
+                err: function (err) {
+                    console.log(err);
+                }
+            })
+            function makecards(products) {
+                $('#output').empty();
+                var row = [];
+                for (var item of products) {
+                    row.push(`<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ">
+                <div class="card " style="min-height:630px;">
+                    <img src="${item.image}" class="card-img-top d-block w-100 mx-auto p-1 " alt="..."  style="height:300px;max-width:300px;" alt="Loading Preview">
+                    <div class="card-body border-top">
+                        <h6 class="card-title">${(item.title).length > 50 ? ((item.title).substring(0, 50).concat('...')) : (item.title)}</h6> 
+                        <div class="card-text ">${(item.description).length > 50 ? ((item.description).substring(0, 55).concat('...')) : (item.description)}</div>
+                        <div class="d-flex flex-column">
+                            <span>Category : ${item.category}</span>
+                            <span>Price : &dollar; ${item.price}</span>
+                            <span>Rating : ${item.rating.rate}(${item.rating.count})</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center pb-5">
+                        <a  class="btn btn-primary w-50 mx-auto" onclick="addToCart(${item.id})" >Add To Cart</a>
+                    </div>
+                </div> `)
+                }
+                $('#output').append(row);
+            }
+            function SearchProducts(data) {
+                $('#searchKey').on('keyup', data, function () {
+                    let $searchArray = data.filter((data) => {
+                        if (data.title.toLowerCase().includes($('#searchKey').val().toLowerCase())) {
+                            return data;
+                        }
+                    });
+                    makecards($searchArray);
+                })
+            }
+            function filtercategory(data) {
+                $('#selectCategory').on('change', data, function () {
+                    if ($(this).val() === 'all') {
+                        makecards(data);
+                    } else {
+                        let $categoryArray = data.filter((data) => {
+                            if (data.category === $(this).val()) {
+                                return data;
+                            }
+                        });
+                        makecards($categoryArray);
+                    }
+
+                });
+            }
+
+            function sortBYPrice(data) {
+                $('#priceRange').on('change', data, function () {
+                    let $priceArray = data.filter((data) => {
+                        if (data.price <= ($(this).val() * 10)) {
+                            return data;
+                        }
+                    });
+                    makecards($priceArray);
+                })
+            }
+            var cartarr = new Array();
+            function addToCart(value) {
+                // console.log(value);
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

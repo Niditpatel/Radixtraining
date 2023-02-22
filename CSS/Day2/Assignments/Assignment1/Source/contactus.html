@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Weblayout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+               <img  class="logo" src="./image/d3-seeklogo.com.svg" alt="Logo">
+                <a href="./contactus.html"><em class="fa fa-fw fa-search"></em> Contact Us</a> 
+                <a href="./aboutus.html"><em class="fa fa-fw fa-envelope"></em>About Us</a> 
+                <a href="./home.html"><em class="fa fa-fw fa-user"></em> Home</a>
+            </div>
+        </header>
+        <div class="main">
+          <div class="left"></div>
+          <div class="middle">
+            <h1>Contact Us Page :</h1>
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./image/1.png" style="width:100%" alt="img1">
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./image/2.png" style="width:100%" alt="img2">
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./image/3.png" style="width:100%" alt="img3">
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&larr;</a>
+              <a class="next" onclick="plusSlides(1)">&rarr;</a>
+              <br>
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+              </div>
+            </div>
+          </div>
+          <div class="right"></div>
+        </div>
+        <footer>
+            <p class="footer_text">Created By Nidit Visaveliya </p>
+        </footer>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+    </script>
+  </body>
+</html> 

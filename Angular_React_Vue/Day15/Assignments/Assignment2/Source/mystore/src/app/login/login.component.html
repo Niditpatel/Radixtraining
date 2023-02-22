@@ -1,0 +1,32 @@
+<div>
+  <div class="text-center">
+    <span>
+      <h1>for admin : </h1>
+    <small>
+      <p>username :nidit,</p>
+      password:nidit123
+    </small>
+    </span>
+    <span class="mt-3">
+      <h1>for user : </h1>
+      <small>
+        <p>username :hemal,</p>
+        password:hemal123
+      </small>
+    </span>
+  </div>
+  <div class="w-fit mx-auto bg-gray-100 p-5 my-5 rounded-xl">
+    <h2 class="text-2xl text-center my-3 uppercase">sign up </h2>
+    <div>
+      <label for="username">User Name : </label><br>
+      <input type="text" [(ngModel)]="username" class="border border-black" id="username" /><br><br>
+    </div>
+    <div>
+      <label for="password">Password : </label><br>
+      <input type="text" [(ngModel)]="password" class="border border-black" id="password" /><br><br>
+    </div>
+    <div>
+      <button class="border bg-gray-500 text-white rounded-xl px-5 py-1" (click)="Login()">Login</button>
+    </div>
+  </div>
+</div>

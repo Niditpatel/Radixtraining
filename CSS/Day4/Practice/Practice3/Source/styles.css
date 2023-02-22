@@ -1,0 +1,36 @@
+div.example {
+    background-color: lightgrey;
+    padding: 20px;
+  }
+  
+  @media only screen and (min-width: 0px) and (max-width: 400px) {
+    div.example {
+      font-size: 20px;
+    }
+  }
+  @media only screen and (min-width: 401px) and (max-width: 700px) {
+    div.example {
+      font-size: 30px;
+    }
+  }
+  @media only screen and (min-width: 701px) and (max-width: 900px) {
+    div.example {
+      font-size: 40px;
+    }
+  }
+  @media only screen and (min-width: 901px) and (max-width: 1100px) {
+    div.example {
+      font-size: 50px;
+    }
+  }
+  @media only screen and (min-width: 1101px) and (max-width: 1300px) {
+    div.example {
+      font-size: 60px;
+    }
+  }
+  @media only screen and (min-width: 1301px) {
+    div.example {
+      font-size: 70px;
+    }
+  }
+  

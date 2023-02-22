@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $('button').click(function () {
+          $.get('https://dummyjson.com/products/1', function (data, status) {
+            alert('Data: ' + data.title + '\nStatus: ' + status);
+          });
+          $.getJSON('https://dummyjson.com/products/1', function (result) {
+            $.each(result, function (i, item) {
+              $('div').append(item + ' ');
+            });
+          });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="div1"><h2>Using jQuery AJAX Change This Text</h2></div>
+
+    <button>Get Content</button>
+  </body>
+</html>

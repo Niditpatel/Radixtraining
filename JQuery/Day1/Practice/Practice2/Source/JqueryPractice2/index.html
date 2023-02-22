@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container p-5">
+    <label for="" class="mb-3"> Please select your technology :</label>
+    <div class="d-flex" id="technologies">
+    </div>
+  </div>
+
+</body>
+<script>
+  var arr = ["PHP", "ASPNET", "ASP", "JSP", "PERL", "Cold-Fusion", "Other"];
+  $(document).ready(function () {
+    $(arr).each(function (index) {
+      $("#technologies").append(`<div class="me-2">
+      <input type="radio" name="technology" id="${arr[index]}" value="${arr[index]}"><label for="${arr[index]}">${arr[index]}</label><br><span class="abc" id="span${arr[index]}" style=' display:none;'></span></div>`)
+    })
+    $('input[type="radio"]').click(function () {
+      if ($("input[type='radio']:checked")) {
+        $(".abc").css("display", "none");
+        $(`#span${$(this).val()}`).text("You have selected" + `${$(this).val()}`).css("display", "block")
+      }
+    })
+
+  });
+</script>
+
+</html>

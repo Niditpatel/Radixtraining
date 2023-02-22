@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Shinobis = parseInt(prompt("Enter Number Of Shinobis"));
+        console.log("Shinobis", Shinobis);
+        var shinobisPower = [];
+        var k =0;
+
+
+        for (var i = 0; i < Shinobis; i++) {
+            var Power = parseInt(prompt(`Enter The Power Of ${i + 1} shinobi : `));
+            shinobisPower.push(Power);
+        }
+        console.log("shinobi array", shinobisPower);
+        var vauleS = parseInt(prompt("Enter The Value Of S "))
+
+        for (k;k < 5; k++) {
+            
+            var count = 0;
+            for (var i = 0; i < shinobisPower.length; i++) {
+                // console.log(count);
+                count += Math.max(shinobisPower[i] - k, 0);
+                // console.log(shinobisPower[i],"shinobipower");
+            }
+            // console.log("count",count);
+            // console.log("valueS",vauleS);
+            if(count <= vauleS) break;
+           
+        }
+        console.log("values of k",k);
+        ;
+    </script>
+</body>
+
+</html>

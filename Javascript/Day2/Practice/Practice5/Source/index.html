@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container mx-auto">
+        <div class=" mx-auto bg-light p-5 mt-5">
+          
+                <div>
+                    <h2 class="mb-4">Final Output </h2>
+                    <textarea name="plain-text" id="output" class="border border-dark h-full w-100"
+                        style="min-height:200px ;" readonly></textarea>
+                </div>
+            
+
+            <div class="accordion mt-5" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Push
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <label for="pushvalue">Enter value For Push :</label>
+                            <input type="text" class="form-control" name="" id="pushvalue">
+                            <button class="btn btn-outline-primary mt-3" onclick="handlepush()">Confirm Push</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Pop
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <button class="btn btn-outline-primary mt-3" onclick="handlepop()">Confirm Pop</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Shift
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <button class="btn btn-outline-primary mt-3" onclick="handleshift()">Confirm Shift</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Unshift
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <label for="unshiftvalue">Enter value For Unshift:</label>
+                            <input type="text" class="form-control" name="" id="unshiftvalue">
+                            <button class="btn btn-outline-primary mt-3" onclick="handleunshift()">Confirm
+                                Unshift</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Delete
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <label for="indexno">From which index no you want to delete :</label>
+                            <input type="number" class="form-control" name="" id="indexno">
+                            <label for="values">How many values you want to delete :</label>
+                            <input type="number" class="form-control" name="" id="values">
+                            <button class="btn btn-outline-primary mt-3" onclick="handledelete()">Confirm
+                                Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var array = new Array();
+        function handlepush(e) {
+            event.preventDefault
+            var pushvalue = document.getElementById("pushvalue").value;
+            array.push(pushvalue);
+            document.getElementById("output").innerHTML = `[${array}]`;
+        }
+        function handlepop(e) {
+            event.preventDefault();
+            if (array.length == 0) {
+                alert("no more values to pop");
+            } else {
+                array.pop();
+                document.getElementById("output").innerHTML = `[${array}]`;
+            }
+
+        }
+        function handleshift(e) {
+            event.preventDefault();
+            if (array.length == 0) {
+                alert("no more values to shift");
+            } else {
+                array.shift();
+                document.getElementById("output").innerHTML = `[${array}]`;
+            }
+
+        }
+        function handleunshift(e) {
+            event.preventDefault();
+            var unshiftV = document.getElementById("unshiftvalue").value;
+            array.unshift(unshiftV);
+            document.getElementById("output").innerHTML = `[${array}]`;
+        }
+        function handledelete(e) {
+            event.preventDefault();
+            var indexnoV = parseInt(document.getElementById("indexno").value);
+            var valuesV = parseInt(document.getElementById("values").value);
+            if (array.length < (indexnoV + valuesV)) {
+                let text = "You dont have that much values in your array if you want to delete all the element from your selected index press ok else cancel it";
+                if (confirm(text) == true) {
+                    array.splice(indexnoV, (array.length - indexnoV));
+                    document.getElementById("output").innerHTML = `[${array}]`;
+                } else {
+                    alert('please take values in range!')
+                }
+            }else{
+                array.splice(indexnoV, valuesV);
+                document.getElementById("output").innerHTML = `[${array}]`;
+            }
+            
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+

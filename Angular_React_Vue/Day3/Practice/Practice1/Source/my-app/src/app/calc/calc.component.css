@@ -1,0 +1,20 @@
+.calc{
+    padding-bottom: 80px ;
+    margin:  0px 500px;
+}
+.calc-btns{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.btn{
+    height: 40px;
+    font-size: medium;
+    width: 40px;
+    border-radius: 10px;
+    background-color:rgba(170, 104, 231, 0.534);
+}
+.btn:active{
+    font-size: larger;
+    background-color:rgb(71, 0, 138);
+}

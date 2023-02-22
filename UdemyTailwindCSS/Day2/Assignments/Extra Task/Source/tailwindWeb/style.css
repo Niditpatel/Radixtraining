@@ -1,0 +1,35 @@
+@font-face {
+    font-family: medium-italic;
+    src: url(./assets/fonts/PlayfairDisplay-MediumItalic.ttf);
+}
+/* .medium-italic{
+    font-family: medium-italic;
+} */
+@font-face {
+    font-family: semibold;
+    src: url(./assets/fonts/PlayfairDisplay-SemiBold.ttf);
+}
+/* .semibold{
+    font-family: semibold;
+} */
+
+
+.panel-title > a:before {
+    float: right !important;
+    /* font-family: FontAwesome; */
+    content:"\f068";
+    padding-right: 5px;
+}
+.panel-title > a.collapsed:before {
+    float: right !important;
+    content:"\f067";
+}
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+    text-decoration:none;
+}
+.sub-list:hover .sub-list-content {
+    display: block;
+  }
+

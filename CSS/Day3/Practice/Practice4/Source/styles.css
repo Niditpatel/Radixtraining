@@ -1,0 +1,9 @@
+/* select div tag / */
+div {
+    width: 200px;
+    border: 2px solid red;
+    padding: 25px;
+    /* add  margin left side of div  */
+    margin-left: 25px;
+  }
+  

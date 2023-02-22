@@ -1,0 +1,18 @@
+<div *ngIf="field?.invalid && (field?.touched|| field?.dirty)" class="text-red-600">
+    <div *ngIf="field?.errors?.['required']">
+        This field is Required
+        <span class="fa-solid fa-circle-exclamation"></span>
+    </div>
+    <div *ngIf="field?.errors?.['minlength']">
+        Not Enough Characters
+        <span class="fa-solid fa-circle-exclamation"></span>
+    </div>
+    <div *ngIf="field?.errors?.['pattern']">
+          Characters must be as per field requirement
+        <span class="fa-solid fa-circle-exclamation"></span>
+    </div>
+    <div *ngIf="field?.errors?.['maxlength']">
+        too much Characters
+        <span class="fa-solid fa-circle-exclamation"></span>
+    </div>
+</div>

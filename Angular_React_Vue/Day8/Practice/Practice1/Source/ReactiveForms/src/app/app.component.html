@@ -1,0 +1,59 @@
+<div class="flex space-x-12 w-fit mx-auto">
+    <div class="bg-gray-100 w-fit  p-5 mt-5">
+        <form [formGroup]="ProfileForm">
+            <label class="text-xl  capitalize" for="">Detail Form  </label><br><br>
+            <div formGroupName="Name" class="mb-4">
+                <label for="Fname">First Name : </label><br>
+                <input type="text" class="form-control border border-black" formControlName="Fname" id="Fname" /><br><br>
+                <label for="Lname">Last Name : </label><br>
+                <input type="text" class="form-control border border-black" formControlName="Lname" id="Lname" />
+            </div>
+            <div class="my-4">
+                <label for="Gender">Gender : </label>
+                <span class="space-x-4">
+                    <span class="space-x-1">
+                        <input type="radio" formControlName="Gender" id="male" value="Male">
+                        <label for="male">Male</label>
+                    </span>
+                    <span class="space-x-1">
+                        <input type="radio" formControlName="Gender" id="female" value="Female" />
+                        <label for="female">Female</label>
+                    </span>
+                </span>
+            </div>
+            <div formGroupName="Address" class="mb-2">
+                <label for="Curraddress">Current Address : </label><br>
+                <input type="text" class="form-control border border-black" formControlName="CurrAddress"
+                    id="Curraddress" /><br><br>
+                <label for="ParamanentAddress">Permanent Address : </label><br>
+                <input type="text" class="form-control border border-black" formControlName="ParmenentAddress"
+                    id="ParamanentAddress">
+            </div>
+            <button class="border border-black rounded-lg px-5 py-1 mt-3"
+                [ngClass]="{'bg-green-300': ProfileForm.valid, 'bg-red-300': !ProfileForm.valid}"
+                [disabled]="!ProfileForm.valid" (click)="submitdata()">
+                Submit Data
+            </button>
+        </form>
+    </div>
+    <div class="bg-gray-100 w-fit p-5 mt-5">
+        <form [formGroup]="UpdateForm">
+            <label for="" class="text-xl ">Update Detail Form </label><br><br>
+            <div>
+                <label for="Name">Name : </label><br>
+                <input type="text" class="form-control border border-black" formControlName="Name" id="Name" /><br><br>
+                <label for="Address">Address : </label><br>
+                <input type="text" class="border border-black form-control" formControlName="Address" id="Address" />
+            </div>
+            <div>
+                <button class="border border-black rounded-lg px-5 py-1 mt-3"
+                [ngClass]="{'bg-green-300': UpdateForm.valid, 'bg-red-300': !UpdateForm.valid}"
+               (click)="UpdateData()" >
+                    Update 
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-white p-5 w-fit mx-auto">{{ProfileForm.value | json}}</div>

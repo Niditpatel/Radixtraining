@@ -1,0 +1,21 @@
+<table *ngIf="productList.length !==0" class="border border-black border-collapse mx-auto">
+    <caption>Product List : </caption>
+<thead class="bg-gray-200">
+<th class="border border-black p-2">Product Name</th>
+<th class="border border-black p-2">price</th>
+<th class="border border-black p-2">Qty</th>
+<th class="border border-black p-2">Gross Amount</th>
+<th class="border border-black p-2">Discount</th>
+<th class="border border-black p-2">Payable Amount</th>
+</thead>
+<tbody>
+    <tr class="even:bg-gray-200" *ngFor="let item of productList">
+        <td class="border border-black p-1">{{item.Name}}</td>
+        <td class="border border-black p-1">{{item.Price}}</td>
+        <td class="border border-black p-1">{{item.Qty}}</td>
+        <td class="border border-black p-1">{{item.Gross}}</td>
+        <td class="border border-black p-1">{{item.Discount}}</td>
+        <td class="border border-black p-1">{{item.PayableAmount}}</td>
+    </tr>
+</tbody>
+</table>

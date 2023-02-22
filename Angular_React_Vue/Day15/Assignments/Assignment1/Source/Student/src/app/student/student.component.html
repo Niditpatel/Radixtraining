@@ -1,0 +1,26 @@
+
+<div class="bg-gray-100 p-5">
+    <small>Enter Roll no for delete And update</small>
+    <div class="my-2">
+        <label for="">RollNo : </label>
+        <input  class="border border-black" type="number" [(ngModel)]="RollNo" name="" id="" />
+    </div>
+    <div class="my-2">
+        <label for="">Student Name : </label>
+        <input class="border border-black" type="text" [(ngModel)]="Name" id="" />
+    </div>
+    <div class="my-2">
+        <label for="">Fees : </label>
+        <input  class="border border-black"type="number" [(ngModel)]="Fees" name="" id="" />
+    </div>
+    <div class="my-2">
+        <label for="">Grade : </label>
+        <input class="border border-black" type="text" [(ngModel)]="Grade" name="" id="" />
+    </div>
+    <div class="my-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"> 
+        
+        <button class="border rounded-xl px-5 py-1" (click)="CreateStudent()">Create Student</button>
+        <button class="border rounded-xl px-5 py-1" (click)="DeleteStudent()">Delete Student</button>
+        <button class="border rounded-xl px-5 py-1" (click)="UpdateStudent()">Update Student</button>
+    </div>
+</div>

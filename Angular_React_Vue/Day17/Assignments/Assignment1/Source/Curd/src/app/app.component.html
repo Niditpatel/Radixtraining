@@ -1,0 +1,11 @@
+<div class="bg-black py-2 text-white text-xl flex justify-around">
+  <a routerLink="/List">List</a>
+  <a routerLink="/add">Add</a>
+  <a routerLink="/update">upadte</a>
+  <a routerLink="/delete">delete</a>
+  <div class="space-x-2">
+    <input class="text-black px-2 rounded-md py-1 text-sm" [(ngModel)]="keywords" type="search" name="" id="">
+    <a [routerLink]="['/search',keywords]">Search</a>
+  </div>
+</div>
+<router-outlet></router-outlet>

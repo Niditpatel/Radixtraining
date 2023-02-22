@@ -1,0 +1,18 @@
+<button (click)="visAtlantic()"> Via Atalantic</button>
+<button (click)="Viapecific()">Via Specific</button>
+
+<div>
+    <h3>Atlantice Menu</h3>
+    <div *ngFor="let i of AtlanticMenu">
+        <span>{{i.item}}</span>
+        <button (click)="atalnticmenu(i.id)">Book order</button>
+    </div>
+</div>
+<div>
+    <h3>Pecific Menu</h3>
+    <div *ngFor="let i of AtlanticMenu">
+        <span>{{i.item}}</span>
+        <button (click)="pecificmenu(i.id)">Book order</button>
+    </div>
+</div>
+<router-outlet></router-outlet>

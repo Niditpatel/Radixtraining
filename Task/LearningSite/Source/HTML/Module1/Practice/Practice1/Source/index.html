@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Site</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../../../../script.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../../../../../image/logo.webp" alt="Logo">
+        <div class="header-right">
+          <a href="../../../../../index.html">HOME</a>
+          <a href="../../../../../HTML/index.html">HTML</a>
+          <a href="../../../../../CSS/index.html">CSS</a>
+        </div>
+    </header> 
+    <main>
+        <div class="sidebar">
+          <div class="list" >
+            <div onclick="toggle('#assignmentId')" class="day">Module1</div>
+            <ul id="assignmentId" >
+              <li onclick="toggle('#sub-assign')" class="assign">Assignment
+                <ul id="sub-assign">
+                  <li><a href="../../../Assignments/Assignment1/Source/index.html">Assignment1</a> </li>
+                </ul>
+              </li>
+              <li onclick="toggle('#sub-prac')" class="assign">Practice
+                <ul id="sub-prac">
+                  <li><a href="../../../Practice/Practice1/Source/index.html">Practice1</a> </li>
+                  <li><a href="../../../Practice/Practice2/Source/index.html">Practice2</a> </li>
+                </ul>
+              </li>
+            </ul>
+            <div onclick="toggle('#assignmentId1')" class="day">Module2</div>
+            <ul id="assignmentId1">
+              <li onclick="toggle('#sub-assign1')" class="assign">Assignment
+                <ul id="sub-assign1">
+                  <li><a href="../../../../Module2/Assignments/Assignment1/Source/index.html"> Assignment1</a></li>
+                </ul>
+              </li>
+            </ul> 
+          </div>
+        </div>
+      <div id="output">
+        <div class="sub-output">
+          <table border="1">
+            <caption style="text-align:left ;">Employee Details :</caption>
+            <tr>
+                <th id="emp_id">emp_id</th>
+                <th id="emp_name">emp_name</th>
+                <th id="post_name">post_name</th>
+                <th id="task_assigned">task_assigned</th>
+                <th id="dept_id">dept_id</th>
+                <th id="email_id">email_id</th>
+                <th id="phone_no">phone_no</th>
+            </tr>
+            <tr>
+                <td>4125</td>
+                <td>xyz</td>
+                <td>UI/UX designer</td>
+                <td>Design site</td>
+                <td>#321</td>
+                <td>abc@gmail.com</td>
+                <td>1112223334</td>
+            </tr>
+            <tr>
+                <td>4126</td>
+                <td>Abyc</td>
+                <td>QA</td>
+                <td>Testing</td>
+                <td>#412</td>
+                <td>abc@gmail.com</td>
+                <td>1112223334</td>
+            </tr>
+            <tr>
+                <td>4145</td>
+                <td>Abcv</td>
+                <td>React Dveloper</td>
+                <td>Developing frontend</td>
+                <td>#231</td>
+                <td>abc@gmail.com</td>
+                <td>1112223334</td>
+            </tr>
+            <tr>
+                <td>4123</td>
+                <td>Abc</td>
+                <td>Node developer</td>
+                <td>Developing backend</td>
+                <td>#512</td>
+                <td>abc@gmail.com</td>
+                <td>1112223334</td>
+            </tr>
+            <tr>
+                <td>4129</td>
+                <td>Abyc</td>
+                <td>QA</td>
+                <td>Testing</td>
+                <td>#416</td>
+                <td>abc@gmail.com</td>
+                <td>1112223334</td>
+            </tr>
+            <tr>
+                <td>4146</td>
+                <td>Abcv</td>
+                <td>React Dveloper</td>
+                <td>Developing frontend</td>
+                <td>#235</td>
+                <td>abc@gmail.com</td>
+                <td>1112223334</td>
+            </tr>  
+        </table>
+        </div>
+      </div>  
+    </main>
+</body>
+</html>

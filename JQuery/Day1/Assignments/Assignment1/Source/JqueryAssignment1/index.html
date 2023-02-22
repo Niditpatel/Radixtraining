@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#select_country").change(function () {
+                var value = $("option:selected").val();
+                console.log(value);
+                if (value != $("option[value='Select']").text()) {
+                    $("#selectedValue").text("Your selected country: " + value);
+                }
+                else {
+                    $("#selectedValue").html("India <br> US <br> UK <br> Japan <br> Australia <br>");
+                }
+            })
+            $("#select_country").change(function () {
+                var option = $(this).find("option:selected");
+                switch (option.text()) {
+                    case "Select":
+                        option.siblings().show();
+                        break;
+                    case "India":
+                        option.nextAll().hide();
+                        break;
+                    case "US":
+                        option.siblings(".india").hide();
+                        option.nextAll().hide();
+                        break;
+                    case "UK":
+                        option.siblings(".india, .us").hide()
+                        option.nextAll().hide()
+                        break;
+                    case "Japan":
+                        option.siblings(".india, .us, .uk").hide()
+                        option.nextAll().hide()
+                        break;
+                    case "Australia":
+                        option.siblings(".india, .us, .uk, .japan").hide()
+                        option.nextAll().hide()
+                        break;
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="fullBody">
+        <main id="main" class="p-4">
+            <h1 class="h3">Select Country from dropdown</h1>
+            <select name="selection" id="select_country" class="form-select-sm mb-2" style="font-size: large;">
+                <option id="country" class="Select" value="Select">Select<br></option>
+                <option id="country" class="india">India<br></option>
+                <option id="country" class="us">US<br></option>
+                <option id="country" class="uk">UK<br></option>
+                <option id="country" class="japan">Japan<br></option>
+                <option id="country" class="australia" value="Australia">Australia<br></option>
+                <br>
+            </select><br>
+            <div id="selectedValue" class="h5">
+                India <br>
+                US <br>
+                UK <br>
+                Japan <br>
+                Australia <br>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

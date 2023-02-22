@@ -1,0 +1,11 @@
+<label for="num1">Enter First Number : </label>
+<input type="number" name="Number1" id="num1" [(ngModel)]="num1"><br><br>
+<label for="num2">Enter the Second Number : </label>
+<input type="number" name="Number2" id="num2" [(ngModel)]="num2"><br><br>
+<div> Greater Number is :
+<span *ngIf=" num1 > num2 ; else num2temp">{{num1}}
+</span>
+<ng-template #num2temp>
+    <ng-container>{{num2}}</ng-container>
+</ng-template>
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var NoOfTech = 3
+      var Efforts = [10,20,10];
+      var Benifitis = [10,20,11];
+      var UserEffort = 20;
+      var UserBenifit = 0;
+      var Ratio=[];
+      var CurrRatio;
+      var MaxRatio;
+      var Nthmaxratio;
+     
+
+      for(var i = 0 ;i < NoOfTech;i++){
+        Ratio.push( Benifitis[i]/Efforts[i]);
+      }
+
+      while(UserEffort > 0  ){
+      console.log("Ratio",Ratio);
+     var indexOfCurrRatio = Ratio.indexOf(Math.max(...Ratio));
+     console.log(indexOfCurrRatio);
+     if(Efforts[indexOfCurrRatio]<UserEffort){
+      UserEffort -= Efforts[indexOfCurrRatio];}
+      console.log("usereffort",UserEffort);
+      UserBenifit += Benifitis[indexOfCurrRatio];
+      console.log("userBenifit",UserBenifit);
+    }
+
+    </script>
+</body>
+</html>

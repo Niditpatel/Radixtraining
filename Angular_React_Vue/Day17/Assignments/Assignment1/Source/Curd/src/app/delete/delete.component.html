@@ -1,0 +1,14 @@
+<div>
+    <div *ngFor="let item of postlist"
+        class="w-[300px] sm:w-[700px] lg:w-[1000px] xl:w-[1400px] xxl:w-[2500px] mx-auto">
+        <div class="bg-gray-100 border rounded-xl p-5 shadow-xl my-5 hover:shadow-orange-300">
+            <p class="my-2">id : {{item.id}}</p>
+            <p class="my-2">user_id : {{item.user_id}}</p>
+            <p class="my-2">title : {{item.title}}</p>
+            <p class="my-2">body : {{item.body}}</p>
+            <div>
+                <button class="bg-gray-400 text-white px-5 py-1 rounded-xl hover:bg-red-500" (click)="delete(item.id)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

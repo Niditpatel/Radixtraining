@@ -1,0 +1,5 @@
+Subtraction :4 - 3 = 1
+Addition :4 + 3 = 7
+Addition :4 + 3 = 7
+Multiplication :4 * 3 = 12
+Multiplication :4 * 5 = 20

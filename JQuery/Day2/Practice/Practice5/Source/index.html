@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .ancestors * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+        $('ul').find('span').css({
+          color: 'blue',
+          border: '1px dotted blue',
+          padding: '5px 5px',
+        });
+      });
+    </script>
+  </head>
+
+  <body class="ancestors">
+    body (great-grandparent)
+    <div style="width: 500px">
+      div (grandparent)
+      <ul>
+        ul (direct parent)
+        <li>
+          li (child)
+          <span>span (grandchild)</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

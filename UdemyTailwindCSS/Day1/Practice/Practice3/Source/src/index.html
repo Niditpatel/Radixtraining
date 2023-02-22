@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="../dist/output.css">
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <!-- TYPOGRAPHY  -->
+      <p class="text-3xl text-center my-8 py-4 border-2 border-cyan-500">
+        TYPOGRAPHY
+      </p>
+
+      <!-- font family  -->
+      <p class="text-2xl mb-4">Font Family</p>
+      <p class="font-sans">The quick brown fox ...</p>
+      <p class="font-serif">The quick brown fox ...</p>
+      <p class="font-mono">The quick brown fox ...</p>
+
+      <p class="font-mono hover:font-serif">The quick brown fox ...</p>
+      <p class="font-mono md:font-sans">The quick brown fox ...</p>
+
+      <!-- Font size  -->
+      <p class="text-2xl my-4">Font Size</p>
+      <p class="text-xs">Nidit</p>
+      <p class="text-sm">Nidit</p>
+      <p class="text-base">Nidit</p>
+      <p class="text-lg">Nidit</p>
+      <p class="text-xl">Nidit</p>
+      <p class="text-2xl">Nidit</p>
+      <p class="text-3xl">Nidit</p>
+      <p class="text-4xl">Nidit</p>
+      <p class="text-5xl">Nidit</p>
+      <p class="text-6xl">Nidit</p>
+      <p class="text-7xl">Nidit</p>
+      <p class="text-8xl">Nidit</p>
+      <p class="text-9xl">Nidit</p>
+
+      <!-- Font Smoothing  -->
+      <p class="text-2xl my-4">Font Smoothing</p>
+      <p class="antialiased">Nidit</p>
+      <p class="subpixel-antialiased">Nidit</p>
+
+      <!-- font style  -->
+      <p class="text-2xl my-4">Font Style</p>
+      <p class="italic">Lorem, ipsum.</p>
+      <p class="non-italic">Lorem, ipsum.</p>
+
+      <!-- font weight  -->
+      <p class="text-2xl my-4">Font Weight</p>
+      <p class="font-thin">Lorem, ipsum.</p>
+      <p class="font-extralight">Lorem, ipsum.</p>
+      <p class="font-light">Lorem, ipsum.</p>
+      <p class="font-normal">Lorem, ipsum.</p>
+      <p class="font-medium">Lorem, ipsum.</p>
+      <p class="font-semibold">Lorem, ipsum.</p>
+      <p class="font-bold">Lorem, ipsum.</p>
+      <p class="font-extrabold">Lorem, ipsum.</p>
+      <p class="font-black">Lorem, ipsum.</p>
+
+      <!-- Font variant numeric  -->
+      <p class="text-2xl my-4">Font Variant Numeric</p>
+      <p class="normal-nums">1234567890</p>
+      <p class="ordinal">1st -------</p>
+      <p class="slashed-zero">0 O</p>
+      <p class="lining-nums">1234567890</p>
+      <p class="oldstyle-nums">1234567890 -------------</p>
+      <p class="proportional-nums">1234 -------</p>
+      <p class="proportional-nums">2345456 -------</p>
+      <p class="tabular-nums">1234 -------</p>
+      <p class="tabular-nums">234567 -------</p>
+      <p class="diagonal-fractions">1/2 3/4 5/6</p>
+      <p class="stacked-fractions">1/2 3/4 5/6 -------</p>
+
+      <!-- latter spacing -->
+      <p class="text-2xl my-4">Latter Spacing</p>
+      <p class="tracking-tighter">Lorem ipsum dolor sit amet.</p>
+      <p class="tracking-tight">Lorem ipsum dolor sit amet.</p>
+      <p class="tracking-normal">Lorem ipsum dolor sit amet.</p>
+      <p class="tracking-wide">Lorem ipsum dolor sit amet.</p>
+      <p class="tracking-wider">Lorem ipsum dolor sit amet.</p>
+      <p class="tracking-widest">Lorem ipsum dolor sit amet.</p>
+
+      <!-- line height  -->
+      <p class="text-2xl my-4">Line Height</p>
+      <p class="leading-9">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum placeat
+        qui corporis fugit reprehenderit harum provident itaque adipisci quidem
+        obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+        fuga hic dignissimos perferendis mollitia fugiat optio fugit earum
+        laborum. Laborum velit accusantium porro deserunt sunt molestias eum
+        dicta fuga!
+      </p>
+      <p class="leading-tight">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum placeat
+        qui corporis fugit reprehenderit harum provident itaque adipisci quidem
+        obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+        fuga hic dignissimos perferendis mollitia fugiat optio fugit earum
+        laborum. Laborum velit accusantium porro deserunt sunt molestias eum
+        dicta fuga!
+      </p>
+      <p class="leading-loose">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem excepturi
+        veniam quasi saepe veritatis quas voluptas accusamus quae facilis
+        possimus tempora molestiae ab expedita, fugiat obcaecati illum
+        voluptatum iure eos aspernatur delectus maiores tempore commodi ut rem!
+        Repudiandae explicabo dolor animi qui, cupiditate dicta, architecto,
+        enim vero sapiente non molestiae!
+      </p>
+      <pre class="mt-5">
+    leading-3	line-height: .75rem; /* 12px */
+    leading-4	line-height: 1rem; /* 16px */
+    leading-5	line-height: 1.25rem; /* 20px */
+    leading-6	line-height: 1.5rem; /* 24px */
+    leading-7	line-height: 1.75rem; /* 28px */
+    leading-8	line-height: 2rem; /* 32px */
+    leading-9	line-height: 2.25rem; /* 36px */
+    leading-10	line-height: 2.5rem; /* 40px */
+    leading-none	line-height: 1;
+    leading-tight	line-height: 1.25;
+    leading-snug	line-height: 1.375;
+    leading-normal	line-height: 1.5;
+    leading-relaxed	line-height: 1.625;
+    leading-loose	line-height: 2;
+  </pre
+      >
+
+      <!-- list style type  -->
+      <p class="text-2xl my-4">List Style Type</p>
+      <ul class="list-none">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <ol class="list-disc">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ol>
+      <ul class="list-decimal">
+        <li>Lorem.</li>
+        <li>Lorem.</li>
+        <li>Lorem.</li>
+      </ul>
+
+      <!-- list style position  -->
+      <p class="text-2xl my-4">List Style Position</p>
+      <ul class="list-disc list-inside">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <ul class="list-disc list-outside">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+
+      <!-- text align  -->
+      <p class="text-2xl my-4">List Align</p>
+      <div style="width: 200px">
+        <p class="text-left">Lorem, ipsum.</p>
+        <p class="text-center">Lorem, ipsum.</p>
+        <p class="text-right">Lorem, ipsum.</p>
+        <p class="text-justify">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit saepe
+          in non perferendis recusandae, corrupti harum dolores quia est, ullam
+          reprehenderit ducimus ex minus odit vero at nisi sapiente ratione?
+        </p>
+        <div style="height: 100px" class="mb-10">
+          <p class="text-start">Lorem ipsum dolor sit amet. -------------</p>
+          <br /><br />
+          <p class="text-end">Lorem ipsum dolor sit amet. -------------</p>
+        </div>
+      </div>
+
+      <!-- text color  -->
+      <p class="text-2xl my-4">Text Color</p>
+      <p class="text-inherit">Lorem, ipsum dolor.</p>
+      <p class="text-current">Lorem, ipsum dolor.</p>
+      <p class="text-transparent">Lorem, ipsum dolor.</p>
+      <p class="text-black">Lorem, ipsum dolor.</p>
+      <p class="text-rose-400">Lorem, ipsum dolor.</p>
+      <p class="text-white">Lorem, ipsum dolor.</p>
+      <p class="text-slate-50">Lorem, ipsum dolor.</p>
+      <p class="text-gray-100">Lorem, ipsum dolor.</p>
+      <p class="text-zinc-200">Lorem, ipsum dolor.</p>
+      <p class="text-nutral-300">Lorem, ipsum dolor.</p>
+      <p class="text-red-400">Lorem, ipsum dolor.</p>
+      <p class="text-orange-500">Lorem, ipsum dolor.</p>
+      <p class="text-amber-600">Lorem, ipsum dolor.</p>
+      <p class="text-yellow-700">Lorem, ipsum dolor.</p>
+      <p class="text-sky-800">Lorem, ipsum dolor.</p>
+      <p class="text-indigo-900">Lorem, ipsum dolor.</p>
+
+      <p class="my-2 font-light">
+        you can use [gray
+        ,zinc,nutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,cyan
+        ,sky,blue,indigo,violet ,purple,fuchsia,pink,rose] in the place of slate
+        .
+      </p>
+
+      <!-- text decoration  -->
+      <p class="text-2xl my-4">Text Decoration</p>
+      <p class="underline">Lorem ipsum dolor sit amet.</p>
+      <p class="line-through">Lorem ipsum dolor sit amet.</p>
+      <p class="overline">Lorem ipsum dolor sit amet.</p>
+      <p class="no-underline">Lorem ipsum dolor sit amet.</p>
+
+      <!-- text decoration Color -->
+      <p class="text-2xl my-4">Text Decoration Color</p>
+      <p class="font-light">
+        you learned text color just use ecoration in place of text for text
+        decoration color.
+      </p>
+      <p class="underline decoration-rose-800">Lorem ipsum dolor sit amet.</p>
+
+      <!-- text decoration style  -->
+      <p class="text-2xl my-4">Text Decoration Style</p>
+      <p class="underline decoration-solid">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-double">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-dotted">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-dashed">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-wavy">Lorem ipsum dolor sit amet.</p>
+
+      <!-- text decoration thickness -->
+      <p class="text-2xl my-4">Text Ddecoration Thickness</p>
+      <p class="underline decoration-auto">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-from-font">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-0">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-1">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-2">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-4">Lorem ipsum dolor sit amet.</p>
+      <p class="underline decoration-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+
+      <!-- text underline offset  -->
+      <p class="text-2xl my-4">Text Underline Offset</p>
+      <p class="underline underline-offset-auto">Lorem ipsum dolor sit amet.</p>
+      <p class="underline underline-offset-0">Lorem ipsum dolor sit amet.</p>
+      <p class="underline underline-offset-1">Lorem ipsum dolor sit amet.</p>
+      <p class="underline underline-offset-2">Lorem ipsum dolor sit amet.</p>
+      <p class="underline underline-offset-4">Lorem ipsum dolor sit amet.</p>
+      <p class="underline underline-offset-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+
+      <!-- text transform  -->
+      <p class="text-2xl my">Text Transform</p>
+      <p class="uppercase">Lorem ipsum dolor sit amet.</p>
+      <p class="lowercase">Lorem ipsum dolor sit amet.</p>
+      <p class="capitalize">Lorem ipsum dolor sit amet.</p>
+      <p class="normal-case">Lorem ipsum dolor sit amet.</p>
+
+      <!-- text overflow -->
+      <p class="text-2xl my-4">Text Overflow</p>
+      <div style="width: 300px">
+        <p class="truncate">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus, dolore.
+        </p>
+      </div>
+      <br />
+      <div style="width: 300px">
+        <p class="text-ellipsis overflow-hidden">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus, dolore. -------------
+        </p>
+      </div>
+      <div style="width: 300px">
+        <p class="text-clip overflow-hidden">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus, dolore. -------------
+        </p>
+      </div>
+
+      <!-- text indent  -->
+      <p class="text-2xl my-4">Text Indent</p>
+      <div style="width: 400px">
+        <p class="indent-8">
+          So I started to walk into the water. I won't lie to you boys, I was
+          terrified. But I pressed on, and as I made my way past the breakers a
+          strange calm came over me. I don't know if it was divine intervention
+          or the kinship of all living things but I tell you Jerry at that
+          moment, I <em>was</em> a marine biologist.
+        </p>
+      </div>
+      <p class="font-light mt-2">
+        indent-0 to indent-96 you can give indent in between 0rem to 24rem and
+        class name as per rem is indent-rem*4;
+      </p>
+
+      <!-- vertical align  -->
+      <p class="text-2xl my-4">Vertical Align</p>
+      <span class="align-baseline">Lorem.</span>
+      <span class="align-top">Lorem.</span>
+      <span class="align-middle">Lorem.</span>
+      <span class="align-bottom">Lorem.</span>
+      <span class="align-text-top">Lorem.</span>
+      <span class="align-text-bottom">Lorem.</span>
+      <span class="align-sub">Lorem.</span>
+      <span class="align-sup">Lorem.</span>
+
+      <!-- whitespace  -->
+      <p class="text-2xl my-4">whitespace</p>
+      <div class="w-3/4">
+        <div class="whitespace-normal">
+          Hey everyone! It's almost 2022 and we still don't know if there is
+          aliens living among us, or do we? Maybe the person writing this is an
+          alien. You will never know.
+        </div>
+      </div>
+      <div class="w-3/4">
+        <div class="whitespace-nowarp">
+          Hey everyone! It's almost 2022 and we still don't know if there is
+          aliens living among us, or do we? Maybe the person writing this is an
+          alien. You will never know.
+        </div>
+      </div>
+      <div class="w-3/4">
+        <div class="whitespace-pre">
+          Hey everyone! It's almost 2022 and we still don't know if there is
+          aliens living among us, or do we? Maybe the person writing this is an
+          alien. You will never know.
+        </div>
+      </div>
+      <div class="w-3/4">
+        <div class="whitespace-pre-line">
+          Hey everyone! It's almost 2022 and we still don't know if there is
+          aliens living among us, or do we? Maybe the person writing this is an
+          alien. You will never know.
+        </div>
+      </div>
+      <div class="w-3/4">
+        <div class="whitespace-pre-wrap">
+          Hey everyone! It's almost 2022 and we still don't know if there is
+          aliens living among us, or do we? Maybe the person writing this is an
+          alien. You will never know.
+        </div>
+      </div>
+
+      <!-- word break  -->
+      <p class="text-2xl my-4">Word Break</p>
+      <div class="w-1/4 border border-indigo-600">
+        <div class="break-normal">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo quam nam
+          sapiente totam perspiciatis error neque cupiditate laborum. Corrupti,
+          autem unde. Voluptas corporis numquam blanditiis consectetur labore
+          beatae praesentium sapiente minima, vitae veniam placeat, deleniti
+          porro minus cum earum enim, reiciendis itaque modi explicabo nesciunt
+          amet fuga? Quaerat, adipisci temporibus.
+        </div>
+      </div>
+      <div class="w-1/4">
+        <div class="break-words border border-indigo-600">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, a
+          obcaecati praesentium velit culpa hic repellendus nulla aliquam fuga
+          sequi ad laboriosam aperiam tempora maxime quod? Temporibus
+          perferendis officia hic.
+        </div>
+      </div>
+      <div class="w-1/4">
+        <div class="break-all border border-indigo-600">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, a
+          obcaecati praesentium velit culpa hic repellendus nulla aliquam fuga
+          sequi ad laboriosam aperiam tempora maxime quod? Temporibus
+          perferendis officia hic.
+        </div>
+      </div>
+
+      <!-- content  -->
+      <p class="text-2xl my-4">Content</p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.<a
+          class="text-blue-600 after:content-['_↗']"
+          href=""
+          target="_blank"
+          >twitter</a
+        >
+        A nesciunt doloribus similique officiis id veritatis voluptatibus beatae
+        perspiciatis enim magni.
+      </p>
+      <p class="font-light">
+        you can pass attribute value from attr() function
+      </p>
+      <div
+        before=" Hello World hii everyone"
+        class="before:content-[attr(before)]"
+      ></div>
+      <p class="font-light">underscore consoidered as a space</p>
+      <div class="before:content-['Hello_world']"></div>
+      <br />
+      <div
+        class="
+          before:content-['Not_Hovering']
+          hover:before:content-['Hovering']
+          w-1/5
+        "
+      ></div>
+    </div>
+  </body>
+</html>

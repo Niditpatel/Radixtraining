@@ -1,0 +1,38 @@
+<nav class="bg-gray-300 h-12 mb-8">
+  <div class="container-fluid py-3 px-24 flex justify-between">
+    <a class="navbar-brand text-xl" *ngIf="show ; else posts" href="#">Likes</a>
+    <ng-template #posts>
+      <a class="navbar-brand text-xl"  href="#">Posts</a>
+    </ng-template>
+    <div>
+      <ul class="ms-auto flex space-x-4 mb-2 mb-lg-0">
+        <li class="nav-item" *ngIf="show ;else likeicon" id="cart-button">
+          <a class="nav-link" (click)="showCart()" href="#">
+            <em class="fa-solid fa-arrow-left"></em>
+          </a>
+        </li>
+        <ng-template #likeicon>
+          <a class="nav-link" (click)="showCart()" href="#">
+            <em class="fa-regular fa-heart text-xl text-rose-900">{{this.LikedPostList.length}}</em>
+          </a>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 mx-auto w-fit " *ngIf="show ;">
+  <div class="flex" *ngFor="let item of LikedPostList">
+    <div class="my-1 w-fit">
+      <img src={{item.PostedImage}} class=" w-fit h-24  " alt="" />
+    </div>
+    <div class="rounded-lg shadow-lg bg-white max-w-sm">
+      <div class="my-2 mx-2">
+        <h5 class="text-gray-900 text-xl font-medium mb-2"> Name : {{item.PostName}}</h5>
+        <p><span class="text-gray-900 text-l  font-medium mb-2">Posted On : </span>
+          {{(item.PostedDate).toLocaleDateString()}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-post-list (postLiked)="likedpost($event)" [class.hidden]="show==true" [class.show]="show == false"></app-post-list>

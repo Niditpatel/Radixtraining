@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var N = parseInt(prompt("ENter the Length of The Array :"));
+        var MyArray = [];
+
+        for (var i = 0; i < N; i++) {
+            var value = parseInt(prompt(`Enter The value of ${i +1 } number`));
+            MyArray.push(value);
+        }
+        console.log("array", MyArray);
+
+        MMM(N, MyArray);
+
+        function MMM(N, MyArray) {
+            var median;
+            var mean;
+            var mode = 0;
+            modeitem = {};
+            let count = 0;
+
+            var newArray = MyArray;
+            newArray.sort(function (a, b) { return a - b });
+            //    console.log("sortarray",MyArray.sort(function(a,b){return b-a}));
+            // console.log("newArray", newArray);
+
+            mean = newArray.reduce((a, b) => a + b, 0) / N;
+            console.log("mean", mean);
+
+            if (N % 2 == 0) {
+                median = (newArray[N / 2 - 1] + newArray[N / 2 + 1]) / 2;
+            } else {
+                median = newArray[Math.floor(N / 2)]
+            }
+            console.log("median", median);
+            for (let i = 0; i < N; i++) {
+                const item = newArray[i];
+                // console.log("item", item);
+
+                if (modeitem[item]) {
+                    modeitem[item]++;
+                } else {
+                    modeitem[item] = 1;
+                }
+
+                if (count < modeitem[item]) {
+                    mode = item;
+                    count = modeitem[item];
+                }
+            }
+            console.log("mode", mode);
+        }
+
+
+    </script>
+</body>
+
+</html>

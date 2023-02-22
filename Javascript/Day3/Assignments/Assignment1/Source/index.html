@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .block {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-4">
+        <form class="row g-3  border pt-5 px-3 pb-3 ">
+            <div class="col-12">
+                <p class="h2">Employee Details :</p>
+                <input type="hidden" name="" id="indexno">
+            </div>
+            <div class="col-12">
+                <label for="validationId" class="form-label">Employee Id</label>
+                <input class="form-control" id="validationId" placeholder="Enter Id" type="number" required>
+                <div id="id-invalid-feedback" class="d-none text-danger " onkeypress="">
+                    Id must required
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationName" class="form-label">Employee Name</label>
+                <input class="form-control" id="validationName" placeholder="Enter Name " type="text" required />
+                <div id="name-invalid-feedback" class="d-none text-danger ">
+                    Please fill this field
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationAge" class="form-label">Employee Age</label>
+                <input class="form-control" id="validationAge" placeholder="Enter Age" type="number" required />
+                <div id="age-invalid-feedback" class="d-none text-danger ">
+                    this field is required
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="">Gender : </label>
+                <input type="radio" class="form-check-input ms-2" id="validationMale" name="radio-stacked" value="Male"
+                    required>
+                <label class="form-check-label" for="validationMale">Male</label>
+                <input type="radio" class="form-check-input" id="validationFemale" name="radio-stacked" value="Female"
+                    required>
+                <label class="form-check-label" for="validationFemale">Female</label>
+                <div id="gender-invalid-feedback" class="d-none text-danger ">select your gender</div>
+            </div>
+            <div class="col-12">
+                <label>Designation</label>
+                <select class="form-select" id="designation" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option value="Trainee Software Engineer">Trainee Software Engineer</option>
+                    <option value="Assosiate Software Engineer">Assosiate Software Engineer</option>
+                    <option value="React Developer">React Developer</option>
+                    <option value="Php Developer">Php Developer</option>
+                </select>
+                <div id="desig-invalid-feedback" class="d-none text-danger ">please select Designation</div>
+            </div>
+            <div class="col-12">
+                <label for="validationSalary" class="form-label">Employee Salary</label>
+                <input class="form-control" id="validationSalary" placeholder="Enter Salary" type="number" required />
+                <div id="salary-invalid-feedback" class="d-none text-danger ">
+                    This field is required
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationLocation" class="form-label">Location</label>
+                <input class="form-control" id="validationLocation" placeholder="Enter your Location " type="text"
+                    required />
+                <div id="location-invalid-feedback" class="d-none text-danger ">
+                    Please fill this field
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationEmail" class="form-label">Email Id</label>
+                <input class="form-control" id="validationEmail" placeholder="Enter your Email " type="email"
+                    required />
+                <div id="email-invalid-feedback" class="d-none text-danger ">
+                    Please fill this field
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationDate" class="form-label">Date Of Joining</label>
+                <input class="form-control" id="validationDate" type="date" required />
+                <div id="doj-invalid-feedback" class="d-none text-danger ">
+                    Please fill this field
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationContact" class="form-label">Contact Number</label>
+                <input class="form-control" id="validationContact" placeholder="Enter your Contact Number" type="number"
+                    required />
+                <div id="cno-invalid-feedback" class="d-none text-danger ">
+                    Please fill this field
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" id="adddata" type="submit" onsubmit="validation()">Add</button>
+            </div>
+        </form>
+        <table class="table mt-5">
+            <caption class="mt-5">Employee Details of batch-aug-22.</caption>
+            <thead>
+                <tr>
+                    <th>
+                        sr no.
+                    </th>
+                    <th>
+                        Emp ID
+                    </th>
+                    <th>Emp Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                    <th>location</th>
+                    <th>email id</th>
+                    <th>joining date</th>
+                    <th>contact number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbl">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var tablelist = [];
+        function binddata(tablelist) {
+            var row = ` `;
+            tablelist.forEach(function (data, i) {
+                row += `<tr><td>${i + 1}</td><td>${data[0]}</td><td>${data[1]}</td><td>${data[2]}</td><td>${data[3]}</td><td>${data[4]}</td><td>${data[5]}</td>
+                <td>${data[6]}</td><td>${data[7]}</td><td>${data[8]}</td><td>${data[9]}</td>
+                <td><a href="#" onclick="edit(${i})"><em class="fa-solid fa-pen-to-square"></em></a>
+            <a href="#" class="ms-2" onclick="del(${i})"><em class="fa-solid fa-trash "></em></a></td></tr>`
+            })
+            document.getElementById('tbl').innerHTML = row;
+        }
+        function del(i) {
+            event.preventDefault();
+            // console.log(i);
+            tablelist.splice(i, 1);
+            binddata(tablelist);
+        }
+        function edit(i) {
+            var data = tablelist[i];
+            document.getElementById('validationId').value = data[0];
+            document.getElementById('validationName').value = data[1];
+            document.getElementById('validationAge').value = data[2];
+            if (data[3] == "male") {
+                document.getElementById("validationMale").checked = "true";
+            } else if (data[3] == "female") {
+                document.getElementById("validationFemale").checked = "true";
+            }
+            document.getElementById("designation").value = data[4];
+            document.getElementById("validationSalary").value = data[5];
+            document.getElementById('validationLocation').value = data[6];
+            document.getElementById('validationEmail').value = data[7];
+            var date = data[8].split('/').reverse().join('-');
+            document.getElementById('validationDate').value = date;
+            document.getElementById('validationContact').value = data[9];
+            document.getElementById('indexno').value = i;
+            document.getElementById('adddata').innerText = "Update";
+        }
+        function addemp(e) {
+            event.preventDefault();
+            var empid = document.getElementById('validationId').value;
+            console.log("empid", empid);
+            var empname = document.getElementById('validationName').value;
+            var empage = document.getElementById('validationAge').value;
+            var radio = document.getElementsByName("radio-stacked");
+            for (var i = 0; i < radio.length; i++) {
+                if (radio[i].checked) {
+                    var empgender = radio[i].value;
+                    break;
+                }
+                if (empgender === undefined) {
+                    empgender = "";
+                }
+            }
+            var empdesignation = document.getElementById("designation").value;
+            var location = document.getElementById('validationLocation').value;
+            var empemail = document.getElementById('validationEmail').value;
+            var joindate = document.getElementById('validationDate').value;
+            var empsalary = document.getElementById("validationSalary").value;
+            var empcontact = document.getElementById('validationContact').value;
+            var indexno = document.getElementById('indexno').value;
+            var data = [empid, empname, empage, empgender, empdesignation, empsalary, location, empemail, joindate, empcontact];
+            console.log("empid", typeof (empid));
+            console.log("salary");
+            function validation(e) {
+                event.preventDefault();
+                if (empid.length === 0) {
+                    document.getElementById('id-invalid-feedback').classList.add('block');
+                    document.getElementById('id-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                console.log(empname);
+                if (empname.length === 0) {
+                    document.getElementById('name-invalid-feedback').classList.add('block');
+                    document.getElementById('name-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                if (empage.length === 0) {
+                    document.getElementById('age-invalid-feedback').classList.add('block');
+                    document.getElementById('age-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                if (empgender == '') {
+                    document.getElementById('gender-invalid-feedback').classList.add('block');
+                    document.getElementById('gender-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                if (empdesignation.length === 0) {
+                    document.getElementById('desig-invalid-feedback').classList.add('block');
+                    document.getElementById('desig-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                if (empsalary.length === 0) {
+                    document.getElementById('salary-invalid-feedback').classList.add('block');
+                    document.getElementById('salary-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                if (location.length === 0) {
+                    document.getElementById('location-invalid-feedback').classList.add('block');
+                    document.getElementById('location-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                if (empemail.length === 0) {
+                    document.getElementById('email-invalid-feedback').classList.add('block');
+                    document.getElementById('email-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                if (joindate.length === 0) {
+                    document.getElementById('doj-invalid-feedback').classList.add('block');
+                    document.getElementById('doj-invalid-feedback').classList.remove('d-none');
+                    return false;
+                }
+                if (empcontact.length === 0) {
+                    document.getElementById('cno-invalid-feedback').classList.add('block');
+                    document.getElementById('cno-invalid-feedback').classList.remove('d-none');
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            if (validation()) {
+                if (indexno == "" || (indexno === undefined)) {
+                    tablelist.push(data);
+
+                } else {
+                    tablelist.splice(indexno, 1, data);
+                    document.getElementById('adddata').innerHTML = "Add"
+                }
+
+                binddata(tablelist);
+                clearForm();
+            }
+        }
+        document.getElementById("adddata").addEventListener("click", addemp);
+        function clearForm() {
+            var empdesignation = document.getElementById("designation").value = "";
+            document.getElementById('validationId').value = "";
+            document.getElementById('validationName').value = "";
+            document.getElementById('validationAge').value = "";
+            document.getElementById('validationLocation').value = "";
+            document.getElementById('validationEmail').value = "";
+            document.getElementById('validationDate').value = "";
+            document.getElementById('validationContact').value = "";
+            document.getElementById('indexno').value = "";
+            document.getElementById('id-invalid-feedback').classList.add('d-none');
+            document.getElementById('name-invalid-feedback').classList.add('d-none');
+            document.getElementById('age-invalid-feedback').classList.add('d-none');
+            document.getElementById('gender-invalid-feedback').classList.add('d-none');
+            document.getElementById('desig-invalid-feedback').classList.add('d-none');
+            document.getElementById('salary-invalid-feedback').classList.add('d-none');
+            document.getElementById('location-invalid-feedback').classList.add('d-none');
+            document.getElementById('email-invalid-feedback').classList.add('d-none');
+            document.getElementById('doj-invalid-feedback').classList.add('d-none');
+        }
+        function validation() {
+            var fvalid = document.querySelectorAll('.needs-validation');
+            console.log(fvalid);
+            if (fvalid.classList.contains('was-validated')) {
+                alert("this is not valid syntax");
+            } else {
+
+            }
+        }
+        binddata(tablelist);
+    </script>
+</body>
+
+</html>

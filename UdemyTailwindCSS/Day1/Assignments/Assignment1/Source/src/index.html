@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q002</title>
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="../node_modules/tw-elements/dist/js/index.min.js">
+  <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
+  <link rel="stylesheet" href="../node_modules/tw-elements/dist/css/index.min.css">
+  <script src="../node_modules/tw-elements/dist/js/index.min.js"></script>
+  <style>
+    .blue input[type='radio']:before {
+      content: '';
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: blue;
+    }
+
+    .red input[type='radio']:before {
+      content: '';
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: red;
+    }
+
+    .green input[type='radio']:before {
+      content: '';
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mx-auto">
+    <nav class="rounded-md w-full mb-5">
+      <ol class="list-reset flex">
+        <li>
+          <a href="#" class="text-blue-600 hover:text-blue-700">Home</a>
+        </li>
+        <li><span class="text-gray-500 mx-2">/</span></li>
+        <li>
+          <a href="#" class="text-blue-600 hover:text-blue-700">Women</a>
+        </li>
+        <li><span class="text-gray-500 mx-2">/</span></li>
+        <li>
+          <a href="#" class="text-blue-600 hover:text-blue-700">Clothing</a>
+        </li>
+        <li><span class="text-gray-500 mx-2">/</span></li>
+        <li>
+          <a href="#" class="text-blue-600 hover:text-blue-700">Coats,Jackets</a>
+        </li>
+        <li><span class="text-gray-500 mx-2">/</span></li>
+        <li>
+          <a href="#" class="text-blue-600 hover:text-blue-700">Bomber</a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="flex">
+      <div class="w-1/4 mr-12">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="
+                accordion-item
+                border-t-0 border-l-0 border-r-0
+                rounded-none
+                bg-white
+                border border-gray-200
+              ">
+            <h2 class="accordion-header mb-0" id="flush-headingOne">
+              <button class="
+                    accordion-button
+                    relative
+                    flex
+                    items-center
+                    w-full
+                    py-4
+                    px-5
+                    text-base text-gray-800 text-left
+                    bg-white
+                    border-0
+                    rounded-none
+                    transition
+                    focus:outline-none
+                  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                aria-controls="flush-collapseOne">
+                Filtered By
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse border-0 collapse show"
+              aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body py-4 px-5">4,S X</div>
+            </div>
+          </div>
+          <div class="
+                accordion-item
+                border-l-0 border-r-0
+                rounded-none
+                bg-white
+                border border-gray-200
+              ">
+            <h2 class="accordion-header mb-0" id="flush-headingTwo">
+              <button class="
+                    accordion-button
+                    collapsed
+                    relative
+                    flex
+                    items-center
+                    w-full
+                    py-4
+                    px-5
+                    text-base text-gray-800 text-left
+                    bg-white
+                    border-0
+                    rounded-none
+                    transition
+                    focus:outline-none
+                  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                aria-controls="flush-collapseTwo">
+                Category
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body py-4 px-5"></div>
+            </div>
+          </div>
+          <div class="
+                accordion-item
+                border-t-0 border-l-0 border-r-0
+                rounded-none
+                bg-white
+                border border-gray-200
+              ">
+            <h2 class="accordion-header mb-0" id="flush-headingThree">
+              <button class="
+                    accordion-button
+                    relative
+                    flex
+                    items-center
+                    w-full
+                    py-4
+                    px-5
+                    text-base text-gray-800 text-left
+                    bg-white
+                    border-0
+                    rounded-none
+                    transition
+                    focus:outline-none
+                  " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                aria-controls="flush-collapseThree">
+                Length
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse border-0 collapse"
+              aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body py-4 px-5"></div>
+            </div>
+            <div class="
+                  accordion-item
+                  border-l-0 border-r-0 border-b-0
+                  rounded-none
+                  bg-white
+                  border border-gray-200
+                ">
+              <h2 class="accordion-header mb-0" id="flush-headingFour">
+                <button class="
+                      accordion-button
+                      collapsed
+                      relative
+                      flex
+                      items-center
+                      w-full
+                      py-4
+                      px-5
+                      text-base text-gray-800 text-left
+                      bg-white
+                      border-0
+                      rounded-none
+                      transition
+                      focus:outline-none
+                    " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                  aria-expanded="false" aria-controls="flush-collapseThree">
+                  Size Range
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body py-4 px-5"></div>
+              </div>
+            </div>
+            <div class="
+                  accordion-item
+                  border-l-0 border-r-0 border-b-0
+                  rounded-none
+                  bg-white
+                  border border-gray-200
+                ">
+              <h2 class="accordion-header mb-0" id="flush-headingThree">
+                <button class="
+                      accordion-button
+                      collapsed
+                      relative
+                      flex
+                      items-center
+                      w-full
+                      py-4
+                      px-5
+                      text-base text-gray-800 text-left
+                      bg-white
+                      border-0
+                      rounded-none
+                      transition
+                      focus:outline-none
+                    " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                  aria-expanded="false" aria-controls="flush-collapseThree">
+                  Size
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse show" aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body py-4 px-5">
+                  <label> <input type="checkbox" checked /> 4,S X </label>
+                  <hr />
+                  <br />
+                  <label> <input type="checkbox" checked /> 00,XXS </label><br />
+                  <label> <input type="checkbox" checked /> )2,XS </label><br />
+                  <label> <input type="checkbox" checked /> 4,S </label><br />
+                  <label> <input type="checkbox" checked /> 6,S </label><br />
+
+                  <label> <input type="checkbox" checked /> 8,M </label><br />
+                  <label> <input type="checkbox" checked /> 10,M </label><br />
+                  <label> <input type="checkbox" checked /> 12,L </label><br />
+                  <label> <input type="checkbox" checked /> 14,L </label><br />
+                  <label>
+                    <input type="checkbox" checked /> 14W,1X,18,XXL </label><br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-3/4">
+        <div class="container mx-3">
+          <div>
+            <p class="text-xl">Women's Bomber Jackets</p>
+          </div>
+          <div class="w-64 mx-auto">
+            <input type="text" class="
+                  form-control
+                  block
+                  w-full
+                  px-3
+                  py-1.5
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  mb-14
+                  focus:text-gray-700
+                  focus:bg-white
+                  focus:border-blue-600
+                  focus:outline-none
+                " id="exampleInputPassword1" placeholder="Sort By Featured" />
+          </div>
+          <div class="grid lg:grid-cols-4 gap-4 md:grid-cols-3 sm:grid-cols-1">
+            <div class="rounded-lg shadow-lg bg-white max-w-sm">
+              <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                <img class="rounded-t-lg"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp    " alt="" />
+              </a>
+              <div class="p-6">
+                <div class="flex mb-2">
+                  <div class="blue">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                  <div class="red ml-2">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                  <div class="green ml-2">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                </div>
+                <p class="text-blue-900 mb-2">New Markdown</p>
+                <p class="text-sm mb-2">
+                  caslon@ Kint Bomber Jacket (Regular & petite )
+                </p>
+                <p class="mb-2">
+                  <span>WAS: PLN 270.82</span><br />
+                  <span>NEW :PLN 168.7 <span class="text-blue-900">40% off</span>
+                  </span>
+                </p>
+                <div class="flex mb-2">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <p class="ml-3">(10)</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg shadow-lg bg-white max-w-sm">
+              <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                <img class="rounded-t-lg"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp    " alt="" />
+              </a>
+              <div class="p-6">
+                <div class="flex mb-2">
+                  <div class="blue">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                  <div class="red ml-2">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                  <div class="green ml-2">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                </div>
+                <p class="text-blue-900 mb-2">New Markdown</p>
+                <p class="text-sm mb-2">
+                  caslon@ Kint Bomber Jacket (Regular & petite )
+                </p>
+                <p class="mb-2">
+                  <span>WAS: PLN 270.82</span><br />
+                  <span>NEW :PLN 168.7 <span class="text-blue-900">40% off</span>
+                  </span>
+                </p>
+                <div class="flex mb-2">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <p class="ml-3">(10)</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg shadow-lg bg-white max-w-sm">
+              <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                <img class="rounded-t-lg"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp    " alt="" />
+              </a>
+              <div class="p-6">
+                <div class="flex mb-2">
+                  <div class="blue">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                  <div class="red ml-2">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                  <div class="green ml-2">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                </div>
+                <p class="text-blue-900 mb-2">New Markdown</p>
+                <p class="text-sm mb-2">
+                  caslon@ Kint Bomber Jacket (Regular & petite )
+                </p>
+                <p class="mb-2">
+                  <span>WAS: PLN 270.82</span><br />
+                  <span>NEW :PLN 168.7 <span class="text-blue-900">40% off</span>
+                  </span>
+                </p>
+                <div class="flex mb-2">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <p class="ml-3">(10)</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg shadow-lg bg-white max-w-sm">
+              <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                <img class="rounded-t-lg"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp    " alt="" />
+              </a>
+              <div class="p-6">
+                <div class="flex mb-2">
+                  <div class="blue">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                  <div class="red ml-2">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                  <div class="green ml-2">
+                    <input type="radio" name="color" id="" />
+                  </div>
+                </div>
+                <p class="text-blue-900 mb-2">New Markdown</p>
+                <p class="text-sm mb-2">
+                  caslon@ Kint Bomber Jacket (Regular & petite )
+                </p>
+                <p class="mb-2">
+                  <span>WAS: PLN 270.82</span><br />
+                  <span>NEW :PLN 168.7 <span class="text-blue-900">40% off</span>
+                  </span>
+                </p>
+                <div class="flex mb-2">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                    class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                  <p class="ml-3">(10)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

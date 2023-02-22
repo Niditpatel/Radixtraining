@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countVowel(str) { 
+
+        const count = str.match(/[aeiou]/gi).length;
+
+        return count;
+        }
+        const string = prompt('Enter a string: ');
+
+        const result = countVowel(string);
+        document.write(" number of vowels in string : ")
+        document.write(result);
+    </script>
+</body>
+</html>

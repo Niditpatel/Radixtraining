@@ -1,0 +1,44 @@
+.example {
+    padding: 20px;
+    color: white;
+  }
+  @media only screen and (min-width: 0px) and (max-width: 400px) {
+    .example {
+      background: red;
+    }
+    h2 {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 401px) and (max-width: 700px) {
+    .example {
+      background: green;
+    }
+  }
+  @media only screen and (min-width: 701px) and (max-width: 900px) {
+    .example {
+      background: blue;
+    }
+    h2 {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 901px) and (max-width: 1100px) {
+    .example {
+      background: orange;
+    }
+  }
+  @media only screen and (min-width: 1101px) and (max-width: 1300px) {
+    .example {
+      background: pink;
+    }
+    h2 {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 1301px) {
+    .example {
+      background: black;
+    }
+  }
+  

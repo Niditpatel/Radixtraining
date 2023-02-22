@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+                <label for="inpNum1">Enter First Number</label>
+                <input type="text" class="border form-control mb-5" name="" id="inpNum1"><br>
+                <label for="inpNum2">Enter Second Number</label><br>
+                <input type="text" class="border form-control mb-5" name="" id="inpNum2"><br>
+                <label for="finalOutput">Output :</label><br>
+                <textarea type="text" class="border " cols="25" id="finalOutput" readonly></textarea><br>
+                <button type="button" onclick="displayOutput()"
+                    class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                    Find Sum
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function displayOutput() {
+            var Num1 = parseFloat(document.getElementById('inpNum1').value);
+            function x() {
+                var Num2 = parseFloat(document.getElementById('inpNum2').value);
+                function y() {
+                    document.getElementById('finalOutput').value = Num1 + Num2;
+                }
+                if (isNaN(Num2)) {
+                    document.getElementById('finalOutput').value = `Invalid Input`;
+                } else {
+                    y();
+                }
+            }
+            if (isNaN(Num1)) {
+                document.getElementById('finalOutput').value = `Invalid Input`;
+            } else {
+                x();
+            }
+        }  
+    </script>
+</body>
+
+</html>

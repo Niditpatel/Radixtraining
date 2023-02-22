@@ -1,0 +1,88 @@
+<div class="m-5">
+    <fieldset action="" class="border p-5 ">
+        <legend>Employee</legend>
+        <label for="eid">Employee ID : </label>
+        <input type="number" class="from-control border" name="EmpID" id="eid" [(ngModel)]="eid"><br><br>
+        <label for="name">Eployee's Name : </label>
+        <input type="text" class="from-control border" name="EName" id="name" [(ngModel)]=EName><br><br>
+        <label for="Address">Address : </label>
+        <input type="text" class="from-control border" name="Address" id="Address" [(ngModel)]=Address><br><br>
+        <label for="Gender">Select Gender : </label>
+        <span class="space-x-4">
+            <span class="space-x-1">
+                <input type="radio" name="gender" id="male" [(ngModel)]=Gender value="Male"><label
+                    for="male">Male</label>
+            </span>
+            <span class="space-x-1">
+
+                <input type="radio" name="gender" id="female" [(ngModel)]=Gender value="Female"><label
+                    for="female">Female</label>
+            </span>
+        </span>
+        <br><br>
+        <label for="DOJ">DOJ : </label>
+        <input type="date" name="DOJ" id="DOJ" [(ngModel)]="DOJ"><br><br>
+        <label for="hobbies">Hobbies : </label>
+        <span class="space-x-4">
+            <span class="space-x-1" *ngFor="let d of hobbies">
+                <input type="checkbox" [checked]="d.checked" (change)="d.checked = !d.checked"><label>{{d.name}}</label>
+            </span>
+        </span>
+        <br><br>
+        <button class="border rounded-xl hover:text-white hover:bg-blue-400" (click)="SaveEmp()">save</button>
+    </fieldset><br><br><br>
+
+    <div>
+        <label for="MonthFilter">By Month : </label>
+        <input type="number" name="MonthFilter" id="MonthFilter" [(ngModel)]="FMonth" (keyup)="getBymonth()">
+        <label for="SortByName">By Name : </label>
+        <input type="text" name="SortByName" id="SortByName" [(ngModel)]="Fname" (keyup)="getByName()">
+    </div><br>
+
+    <table class="border-collapse border text-center  table-auto border-zinc-900 w-full">
+        <caption>Employees Detail : </caption>
+        <tr class="bg-neutral-400">
+            <th class="border border-zinc-900 p-2">ID</th>
+            <th class="border border-zinc-900 p-2">Name</th>
+            <th class="border border-zinc-900 p-2">Address</th>
+            <th class="border border-zinc-900 p-2">Gender</th>
+            <th class="border border-zinc-900 p-2">DOJ</th>
+            <th class="border border-zinc-900 p-2">Hobbies</th>
+        </tr>
+        <tr *ngIf="Emps.length === 0 ">
+            <td colspan="6" class="text-3xl"> There is no data </td>
+        </tr>
+        <ng-container *ngIf="filterbyname.length !== 0 ; else secFinal">
+            <tr  class="odd:bg-neutral-400" *ngFor="let i of filterbyname">
+                <td class="border border-zinc-900 p-1">{{ i.ID }}</td>
+                <td class="border border-zinc-900 p-1">{{ i.Name }}</td>
+                <td class="border border-zinc-900 p-1">{{ i.Address }}</td>
+                <td class="border border-zinc-900 p-1">{{ i.Gender }}</td>
+                <td class="border border-zinc-900 p-1">{{ i.DOJ }}</td>
+                <td class="border border-zinc-900 p-1">{{ i.Hobbies }}</td>
+            </tr>
+        </ng-container>
+        <ng-template #secFinal>
+            <ng-container *ngIf="filteredbyMongth.length !== 0 ; else finalblock">
+                <tr class="odd:bg-neutral-400" *ngFor=" let i of filteredbyMongth">
+                    <td class="border border-zinc-900 p-1">{{ i.ID }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.Name }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.Address }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.Gender }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.DOJ }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.Hobbies }}</td>
+                </tr>
+            </ng-container>
+            <ng-template #finalblock>
+                <tr class="odd:bg-neutral-400" *ngFor="let i of Emps">
+                    <td class="border border-zinc-900 p-1">{{ i.ID }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.Name }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.Address }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.Gender }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.DOJ }}</td>
+                    <td class="border border-zinc-900 p-1">{{ i.Hobbies }}</td>
+                </tr>
+            </ng-template>
+        </ng-template>
+    </table>
+</div>

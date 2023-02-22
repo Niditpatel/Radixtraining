@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <!-- BACKGROUND   -->
+      <p class="text-3xl text-center my-8 py-4 border-2 border-cyan-500">
+        BACKGROUND
+      </p>
+
+      <!-- background attachment  -->
+      <p class="text-2xl my-4">Background Attachment</p>
+      <div
+        class="bg-fixed w-48 h-48 my-3"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          background-size: cover;
+        "
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quam
+        repellendus deserunt similique delectus mollitia atque labore qui earum
+        saepe!
+      </div>
+      <div
+        class="bg-local w-48 h-48 my-3"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          background-size: cover;
+        "
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quam
+        repellendus deserunt similique delectus mollitia atque labore qui earum
+        saepe!
+      </div>
+      <div
+        class="bg-scroll w-48 h-48 my-3 overflow-scroll"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          background-size: cover;
+        "
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quam
+        repellendus deserunt similique delectus mollitia atque labore qui earum
+        saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+        delectus fugit dignissimos dicta optio consequuntur libero quas a
+        repellendus labore odit dolorem perspiciatis minima commodi blanditiis,
+        facilis mollitia provident. Omnis deserunt eos quod non sint quisquam
+        amet architecto tempore beatae!
+      </div>
+
+      <!-- background Clip  -->
+      <p class="text-2xl my-4">Background Clip</p>
+      <br />
+      <span
+        class="
+          bg-clip-border
+          p-6
+          bg-violet-600
+          border-4 border-violet-300 border-dashed
+          w-1/6
+          ml-2
+        "
+      ></span>
+      <span
+        class="
+          bg-clip-padding
+          p-6
+          bg-violet-600
+          border-4 border-violet-300 border-dashed
+          w-1/6
+          ml-2
+        "
+      ></span>
+      <span
+        class="
+          bg-clip-content
+          p-6
+          bg-violet-600
+          border-4 border-violet-300 border-dashed
+          w-1/6
+          ml-2
+        "
+      ></span
+      ><br /><br /><br />
+
+      <div class="text-5xl font-extrabold">
+        <span
+          class="
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r
+            from-pink-500
+            to-violet-500
+          "
+        >
+          Hello world
+        </span>
+      </div>
+      <!-- BAckground color  -->
+      <p class="text-2xl my-4">Background Color</p>
+      <p class="font-light">
+        just use bg inplace of text in text color property
+      </p>
+
+      <!-- background origin  -->
+      <p class="text-2xl my-4">Background Origin</p>
+      <div
+        class="bg-origin-border p-4 border-4 border-dashed w-1/7 mb-2"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        class="bg-origin-padding p-4 border-4 border-dashed w-1/7 mb-2"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          background-size: cover;
+        "
+      ></div>
+      <div
+        class="bg-origin-content p-4 border-4 border-dashed w-1/7 mb-2"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+        "
+      ></div>
+
+      <!-- background position  -->
+      <p class="text-2xl my-4">Background position</p>
+
+      <div
+        class="bg-no-repeat bg-left-top border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+          background-size: content;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-top border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-right-top border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-left border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-center border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-right border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-left-bottom border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-bottom border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-right-bottom border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+
+      <!-- background repeat  -->
+      <p class="text-2xl my-4">Background Repeat</p>
+
+      <div
+        class="bg-repeat bg-left-top border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-top border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-repeat-x bg-right-top border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-repeat-y bg-left border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-repeat-round bg-center border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-repeat-space bg-right border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+
+      <!-- background size  -->
+      <p class="text-2xl my-4">Background Size</p>
+      <div
+        class="bg-no-repeat bg-auto border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-contain border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+      <div
+        class="bg-no-repeat bg-cover border border-rose-800"
+        style="
+          background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp);
+          height: 500px;
+        "
+      ></div>
+
+      <!-- background image  -->
+      <p class="text-2xl my-4">Background Image</p>
+      <div
+        class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500 mb-2 w-1/5"
+      ></div>
+      <div
+        class="h-14 bg-gradient-to-r from-sky-500 to-indigo-500 mb-2 w-1/5"
+      ></div>
+      <div
+        class="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500 mb-2 w-1/5"
+      ></div>
+      <div
+        class="h-14 bg-gradient-to-r from-purple-500 to-pink-500 mb-2 w-1/5"
+      ></div>
+
+      <!-- gardient color stops  -->
+      <p class="text-2xl my-4">Gradeint Color Stops</p>
+      <p class="font-light my-2">
+        There are three stops strating color middle color and ending color
+      </p>
+      <div
+        class="
+          h-14
+          bg-gradient-to-r
+          from-cyan-500
+          via-blue-200
+          to-indigo-500
+          w-1/5
+        "
+      ></div>
+      <div
+        class="
+          h-14
+          bg-gradient-to-r
+          from-indigo-500
+          via-purple-500 via-indigo-600
+          to-pink-500
+          w-1/2
+        "
+      ></div>
+    </div>
+  </body>
+</html>

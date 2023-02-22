@@ -1,0 +1,10 @@
+<div class="border border-black mx-auto w-fit p-5">
+    <label>Product Name : </label><br>
+<input type="text" class="border border-black form-control px-1" name="Name" id="name" [(ngModel)]="ProductName"><br><br>
+<label>Product Price : </label><br>
+<input type="number" class="border border-black form-control px-1" name="Name" id="price" [(ngModel)]="Price"><br><br>
+<label>Product Qty : </label><br>
+<input type="number" class="border border-black form-control px-1" name="Name" id="qty" [(ngModel)]="Qty"><br><br>
+<button class="border border-black px-2 py-1 rounded-xl hover:bg-gray-200" (click)="AddProduct()">Add Product</button>
+</div>
+<app-product-list [productList]="Products"></app-product-list>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <style>
+        .ancestors * { 
+          display: block;
+          border: 2px solid lightgrey;
+          color: lightgrey;
+          padding: 5px;
+          margin: 15px;
+        }
+        </style>
+</head>
+<body>
+    
+       
+        <script>
+        $(document).ready(function(){
+          $("span").parents().css({"color": "blue", "border": "1px dotted blue",'padding':'5px 5px'});
+        });
+        </script>
+        </head>
+        
+        <body class="ancestors">body (great-great-grandparent)
+          <div style="width:500px;">div (great-grandparent)
+            <ul>ul (grandparent)  
+              <li>li (direct parent)
+                <span>span</span>
+              </li>
+            </ul>   
+          </div>
+        </body>
+</body>
+</html>

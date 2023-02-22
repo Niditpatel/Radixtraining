@@ -1,0 +1,48 @@
+*{
+    scroll-margin-top:100px ;
+}
+body{
+    margin-top: 105px;
+}
+.primary-color{
+    color: #3292a6;
+}
+.navbar{
+    box-shadow: 2px 2px 5px #3292a6;
+    opacity: 0.9;
+    background: #fff;
+}
+.navbar .nav-item{
+    font-size: 1.4rem;
+    padding-right: 20px;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(51, 143, 248);
+}
+#showcase{
+    position: relative;
+    background: url(./image/mountain.jpg);
+    background-repeat: no-repeat;
+    min-height: 600px;
+    background-size: 100vw 600px;
+}
+#showcase .primary-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(50, 146,166, .8);
+}
+#authors img{
+    margin-top: -50px;
+}
+#authors .fab{
+    font-size: 25px;
+}
+#authors .row .card:hover{
+    background-color: rgba(50, 146,166, .8);
+    color: #fff;
+}

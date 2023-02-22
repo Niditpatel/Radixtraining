@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+ <link rel="stylesheet" href="../dist/output.css">
+  </head>
+
+  <body>
+    <div class="container mx-auto">
+      <!-- LAYOUT  -->
+      <p class="text-3xl text-center my-8 py-4 border-2 border-cyan-500">
+        LAYOUT
+      </p>
+
+      <!-- Aspect ratio  -->
+      <p class="text-2xl mb-4">Aspect Ratio</p>
+      <iframe
+        class="w-1/4 aspect-video hover:aspect-square"
+        src="../public/image/portfolio.webm" title="aspact ratio"
+      ></iframe>
+
+      <!-- container  -->
+      <p class="text-2xl my-4">container</p>
+      <pre>
+            container	None	        width: 100%;
+                        sm (640px)	    max-width: 640px;
+                        md (768px)	    max-width: 768px;
+                        lg (1024px)	    max-width: 1024px;
+                        xl (1280px)	    max-width: 1280px;
+                        2xl (1536px)	max-width: 1536px;
+        </pre
+      >
+
+      <!-- columns  -->
+      <p class="text-2xl my-4">Columns</p>
+      <p class="font-light my-2">
+        Use the columns-{count} utilities to set the number of columns that
+        should be created for the content within an element.
+      </p>
+      <div class="columns-4">
+        <img
+          src="../public/image/pexels-picjumbocom-196655 (1).jpg"
+          alt=""
+          srcset=""
+        />
+        <img
+          src="../public/image/Screenshot from 2022-09-08 16-19-07.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          src="../public/image/Screenshot from 2022-09-08 16-19-07.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          src="../public/image/pexels-picjumbocom-196655 (1).jpg"
+          alt=""
+          srcset=""
+        />
+        <img
+          src="../public/image/pexels-picjumbocom-196655 (1).jpg"
+          alt=""
+          srcset=""
+        />
+        <img
+          src="../public/image/Screenshot from 2022-09-08 16-19-07.png"
+          alt=""
+          srcset=""
+        />
+      </div>
+
+      <!-- break after  -->
+      <p class="text-2xl my-4">Break After</p>
+      <div class="columns-2">
+        <p>Well, let me tell you something, ...</p>
+        <p class="break-after-column">Sure, go ahead, laugh...</p>
+        <p>Maybe we can live without...</p>
+        <p>Look. If you think this is...</p>
+      </div>
+
+      <!-- break before  -->
+      <p class="text-2xl my-4">Break Before</p>
+      <div class="columns-2">
+        <p>Well, let me tell you something, ...</p>
+        <p class="break-before-column">Sure, go ahead, laugh...</p>
+        <p>Maybe we can live without...</p>
+        <p>Look. If you think this is...</p>
+      </div>
+
+      <!-- break inside  -->
+      <p class="text-2xl my-4">Break Inside</p>
+      <div class="columns-2">
+        <p>Well, let me tell you something, ...</p>
+        <p class="break-inside-avoid-column">Sure, go ahead, laugh...</p>
+        <p>Maybe we can live without...</p>
+        <p>Look. If you think this is...</p>
+      </div>
+
+      <!-- box decoration break  -->
+      <p class="text-2xl my-4">Break Decoration Break</p>
+      <span
+        class="
+          box-decoration-slice
+          bg-gradient-to-r
+          from-indigo-600
+          to-pink-500
+          text-white
+          px-2
+        "
+      >
+        Hello<br />
+        World </span
+      ><br />
+      <span
+        class="
+          box-decoration-clone
+          bg-gradient-to-r
+          from-indigo-600
+          to-pink-500
+          text-white
+          px-2
+        "
+      >
+        Hello<br />
+        World
+      </span>
+
+      <!-- box sizing  -->
+      <div class="text-2xl my-4">Box Sizing</div>
+      <div class="box-border h-32 w-32 p-4 border-4"></div>
+      <br />
+      <div class="box-content h-32 w-32 p-4 border-4"></div>
+
+      <!-- display  -->
+      <p class="text-2xl my-4">Display</p>
+      <div>
+        When controlling the flow of text, using the CSS property
+        <span class="inline">display: inline</span>
+        will cause the text inside the element to wrap normally. While using the
+        property <span class="inline-block">display: inline-block</span> will
+        wrap the element to prevent the text inside from extending beyond its
+        parent. Lastly, using the property
+        <span class="block">display: block</span>
+        will put the element on its own line and fill its parent.
+      </div>
+
+      <div class="p-4">
+        <div class="flow-root">
+          <div class="my-4">Well, let me tell you something..</div>
+        </div>
+        <div class="flow-root">
+          <div class="my-4">Sure, go ahead, laugh if you want</div>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <img src="../public/image/Screenshot from 2022-09-08 16-19-07.png"  alt=""/>
+        <div>
+          <strong>Andrew Alfred</strong>
+          <span>Technical advisor</span>
+        </div>
+      </div>
+      <div class="grid gap-4 grid-cols-3 grid-rows-3">
+        <div class="w-24 h-24 bg-rose-100"></div>
+        <div class="w-24 h-24 bg-rose-100"></div>
+        <div class="w-24 h-24 bg-rose-100"></div>
+        <div class="w-24 h-24 bg-rose-100"></div>
+        <div class="w-24 h-24 bg-rose-100"></div>
+        <div class="w-24 h-24 bg-rose-100"></div>
+      </div>
+      <span class="inline-grid grid-cols-3 gap-4">
+        <span class="bg-indigo-200 h-48 w-48">01</span>
+        <span class="bg-indigo-200 h-48 w-48">02</span>
+        <span class="bg-indigo-200 h-48 w-48">03</span>
+        <span class="bg-indigo-200 h-48 w-48">04</span>
+        <span class="bg-indigo-200 h-48 w-48">05</span>
+        <span class="bg-indigo-200 h-48 w-48">06</span>
+      </span>
+      <span class="inline-grid grid-cols-3 gap-4">
+        <span class="bg-indigo-200 h-48 w-48">01</span>
+        <span class="bg-indigo-200 h-48 w-48">02</span>
+        <span class="bg-indigo-200 h-48 w-48">03</span>
+        <span class="bg-indigo-200 h-48 w-48">04</span>
+        <span class="bg-indigo-200 h-48 w-48">05</span>
+        <span class="bg-indigo-200 h-48 w-48">06</span>
+      </span>
+
+      <!-- floats -->
+      <p class="text-2xl my-4">Floats</p>
+      <div class="float-right w-1/5 text-center">Hello</div>
+      <div class="float-none w-1/5 text-center">hello</div>
+      <div class="float-left w-1/5 text-center">hello</div>
+      <br /><br />
+
+      <!-- clear  -->
+      <p class="text-2xl my-4">Clear</p>
+      <img src="../public/image/3.png" class="float-left" alt="" />
+      <img src="../public/image/2.png" alt="" class="float-right" />
+      <p class="clear-left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui
+        quasi libero totam officiis similique? Minima aliquid sit, reiciendis
+        nulla repudiandae vitae ipsam et corporis, sunt accusamus sapiente
+        corrupti consectetur.
+      </p>
+
+      <!-- Isolation 
+        <p class="text-2xl my-4">ISolation</p> -->
+
+      <!-- object fit -->
+      <p class="text-2xl my-4">Obejct Fit</p>
+      <div class="bg-indigo-200 mb-5">
+        <img
+          src="../public/image/1.jpg"
+          class="object-cover h-96 w-full"
+          alt=""
+        />
+      </div>
+      <div class="my-4">
+        <img src="../public/image/1.jpg" class="object-contain h-96" alt="" />
+      </div>
+      <div class="bg-indigo-200 my-4">
+        <img
+          src="../public/image/1.jpg"
+          class="object-fill h-96 w-full"
+          alt=""
+        />
+      </div>
+      <div class="bg-indigo-200 my-4">
+        <img
+          src="../public/image/1.jpg"
+          class="object-scale-down h-96 w-full"
+          alt=""
+        />
+      </div>
+
+      <!-- object position  -->
+      <p class="text-2xl my-4">Object Position</p>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-left-top bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png"  alt=""
+          />
+        </div>
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-top bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png"  alt=""
+          />
+        </div>
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-right-top bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png" alt=""
+          />
+        </div>
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-left bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png" alt=""
+          />
+        </div>
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-center bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png" alt=""
+          />
+        </div>
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-right bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png" alt=""
+          />
+        </div>
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-rleft-bottom bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png" alt=""
+          />
+        </div>
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-bottom bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png" alt=""
+          />
+        </div>
+        <div class="w-48 h-48">
+          <img
+            class="object-none object-right-bottom bg-yellow-300 w-24 h-24"
+            src="../public/image/cat.png" alt=""
+          />
+        </div>
+      </div>
+
+      <!-- overflow  -->
+      <p class="text-2xl">Overflow</p>
+      <div class="w-24 h-24 overflow-hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nam
+        perspiciatis animi quia amet alias cumque, autem iure, expedita
+        asperiores minus, neque reprehenderit obcaecati eligendi. Ad mollitia
+        earum voluptatum deleniti corrupti, ullam atque ea voluptas natus,
+        similique maxime velit error maiores consequuntur dolorum harum ipsa eos
+        iure blanditiis autem? Corrupti?
+      </div>
+      <div class="w-24 h-24 overflow-auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nam
+        perspiciatis animi quia amet alias cumque, autem iure, expedita
+        asperiores minus, neque reprehenderit obcaecati eligendi. Ad mollitia
+        earum voluptatum deleniti corrupti, ullam atque ea voluptas natus,
+        similique maxime velit error maiores consequuntur dolorum harum ipsa eos
+        iure blanditiis autem? Corrupti?
+      </div>
+      <div class="w-24 h-24 overflow-clip">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nam
+        perspiciatis animi quia amet alias cumque, autem iure, expedita
+        asperiores minus, neque reprehenderit obcaecati eligendi. Ad mollitia
+        earum voluptatum deleniti corrupti, ullam atque ea voluptas natus,
+        similique maxime velit error maiores consequuntur dolorum harum ipsa eos
+        iure blanditiis autem? Corrupti?
+      </div>
+      <div class="w-24 h-24 overflow-scroll">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nam
+        perspiciatis animi quia amet alias cumque, autem iure, expedita
+        asperiores minus, neque reprehenderit obcaecati eligendi. Ad mollitia
+        earum voluptatum deleniti corrupti, ullam atque ea voluptas natus,
+        similique maxime velit error maiores consequuntur dolorum harum ipsa eos
+        iure blanditiis autem? Corrupti?
+      </div>
+
+      <!-- overscroll behaviour  -->
+      <p class="text-2xl my-4">Overscroll Behaviour</p>
+      <div class="overscroll-contain w-96 h-48">
+        Well, let me tell you something, funny boy. Y'know that little stamp,
+        the one that says "New York Public Library"? Well that may not mean
+        anything to you, but that means a lot to me. One whole hell of a lot.
+        Sure, go ahead, laugh if you want to. I've seen your type before:
+        Flashy, making the scene, flaunting convention. Yeah, I know what you're
+        thinking. What's this guy making such a big stink about old library
+        books? Well, let me give you a hint, junior. Maybe we can live without
+        libraries, people like you and me. Maybe. Sure, we're too old to change
+        the world, but what about that kid, sitting down, opening a book, right
+        now, in a branch at the local library and finding drawings of pee-pees
+        and wee-wees on the Cat in the Hat and the Five Chinese Brothers?
+        Doesn't HE deserve better?
+      </div>
+    </div>
+  </body>
+</html>

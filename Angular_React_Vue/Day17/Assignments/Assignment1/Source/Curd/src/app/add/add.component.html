@@ -1,0 +1,21 @@
+<div class="w-fit mx-auto bg-gray-100 mt-5 p-5 rounded-lg">
+    <div class="my-2">
+        <label for="">id: </label><br>
+        <input type="number" class="border border-black" [(ngModel)]="id" name="" id="">
+    </div>
+    <div class="my-2">
+        <label for="userid">User_id : </label><br>
+        <input type="number" class="border border-black" [(ngModel)]="userid" name="" id="">
+    </div>
+    <div class="my-2">
+        <label for="title">Title : </label><br>
+        <input type="text" class="border border-black" [(ngModel)]="title" name="" id="">
+    </div>
+    <div class="my-2">
+        <label for="body">Body : </label><br>
+        <textarea name="" class="border border-black" [(ngModel)]="body" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="my-2">
+        <button class="border bg-gray-400 px-5 py-1 rounded-xl" (click)="Post()">Post</button>
+    </div>
+</div>

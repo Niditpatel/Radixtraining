@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="output"></p>
+    <script>
+        var myData = {
+            "products": [
+                {
+                    "Name": "Cheese",
+                    "Price": 2.50,
+                    "Location": "Refrigerated foods"
+                },
+                {
+                    "Name": "Crisps",
+                    "Price": 3,
+                    "Location": "the Snack isle"
+                },
+                {
+                    "Name": "Pizza",
+                    "Price": 4,
+                    "Location": "Refrigerated foods"
+                },
+                {
+                    "Name": "Chocolate",
+                    "Price": 1.50,
+                    "Location": "the Snack isle"
+                },
+                {
+                    "Name": "Self-raising flour",
+                    "Price": 1.50,
+                    "Location": "Home baking"
+                },
+                {
+                    "Name": "Ground almonds",
+                    "Price": 3,
+                    "Location": "Home baking"
+                }
+            ]
+        }
+        jsonData = JSON.stringify(myData);
+        localStorage.setItem("products", jsonData);
+        var getProducts = localStorage.getItem("products");
+        console.log(getProducts);
+        getdata('data.json');
+        async function getdata(data) {
+            var fileData = await fetch(data);
+            var displayData = await fileData.json();
+            document.getElementById('output').innerHTML =JSON.stringify( displayData);
+        }
+    </script>
+</body>
+
+</html>

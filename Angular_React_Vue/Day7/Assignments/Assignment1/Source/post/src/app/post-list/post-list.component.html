@@ -1,0 +1,22 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 mx-auto w-fit">
+    <div class="flex justify-center mx-2" *ngFor="let item of PostList">
+        <div class="rounded-lg shadow-lg bg-white max-w-sm">
+            <div class="mx-auto my-1 w-fit">
+                <img src={{item.PostedImage}} class=" w-fit h-48  " alt="" />
+            </div>
+            <div class="my-2 mx-2">
+                <h5 class="text-gray-900 text-xl font-medium mb-2"> Name : {{item.PostName}}</h5>
+                <p class="text-gray-700 text-base mb-4">
+                    <span class="text-gray-900 text-l  font-medium mb-2">Discription : </span> {{item.PostDescription}}
+                </p>
+                <p><span class="text-gray-900 text-l  font-medium mb-2">Posted On : </span>
+                    {{(item.PostedDate).toLocaleDateString()}}</p>
+            </div>
+            <div class="w-fit mr-auto ml-2 my-2">
+                <button type="button" class=" inline-block text-gray-200 text-xl" #like (click)="LikePost(item,like)">
+                    <em class="fa-solid fa-heart"></em>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

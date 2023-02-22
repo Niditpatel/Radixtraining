@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    
+        <header>
+            <nav>
+              <div class="profile">
+                <img class="profile-image" src="./public/image/corporate-user-icon.svg" alt="Profile image">
+              </div>
+              <div class="menu">
+               <p onclick="toggle ('#menu-list')"> <em class="fa-solid fa-bars"></em></p>
+               <div id="menu-list">
+                  <div class="links">
+                      <div class="personal-info">
+                          <p><em class="fa-solid fa-circle-user"></em><a href="#personal_info">  Personal Information</a></p>
+                      </div>
+                      <div class="education">
+                          <p><em class="fa-solid fa-graduation-cap"></em><a href="#edu_background"> Educational Background</a></p>
+                      </div>     
+                      <div class="skill">
+                          <p><em class="fa-solid fa-lightbulb"></em><a href="#skill_display"> Skill</a></p>
+                      </div>
+                      <div class="experience1">
+                          <p><em class="fa-solid fa-file"></em><a href="#exp"> Internship & Projects</a></p>
+                      </div>
+                  </div>
+               </div>
+              </div>
+            </nav>
+          </header>
+          <main>
+              <div class="sidebar">
+                  <div class="links">
+                      <div class="personal-info">
+                          <p><em class="fa-solid fa-circle-user"></em><a href="#personal_info">  Personal Information</a></p>
+                      </div>
+                      <div class="education">
+                          <p><em class="fa-solid fa-graduation-cap"></em><a href="#edu_background"> Educational Background</a></p>
+                      </div>     
+                      <div class="skill">
+                          <p><em class="fa-solid fa-lightbulb"></em><a href="#skill_display"> Skill</a></p>
+                      </div>
+                      <div class="experience1">
+                          <p><em class="fa-solid fa-file"></em><a href="#exp"> Internship & Projects</a></p>
+                      </div>
+                  </div> 
+              </div>
+            <div class="main-content">
+              <div class="personal-details" id="personal_info">
+                <div class="designation">
+                  <p class="name">Nidit Visaveliya</p>
+                  <p class="profession">Trainee Software Engineer</p>
+                </div>
+                <div class="about-me">
+                  <p class="name">About Me</p>
+                  <p>
+                    I am flexible, reliable and possess excellent time keeping skills. I am an enthusiastic, self-motivated, reliable, responsible and hard working person.
+                    I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative.
+                  </p>
+                  <p>
+                    I am recently graduate from gujart technological university in Information technology.highly poised with programing skills and algorithms.
+                    I am lookging for a compnay where i can develop my skill more and utilize it for compnay growth.
+                  </p>
+                </div>
+                <div class="contact-info">
+                  <p class="name">Contact-Info</p>
+                  <p><em class="fa-solid fa-phone"></em> &nbsp; 6353742429</p>
+                  <p><em class="fa-solid fa-envelope"></em> &nbsp;  visaveliyanidit@gmail.com</p>
+                  <p><em class="fa-brands fa-linkedin-in"></em> &nbsp;  NiditVisaveliya</p>
+                  <p><em class="fa-solid fa-location-pin"></em> &nbsp;  Devakigalol,Jetpur,Rajkot,360370.</p>
+                </div>
+                <div class="languages">
+                  <p class="name">Languages</p>
+                  <p>Gujarati</p>
+                  <p>Hindi</p>
+                  <p>English</p>
+                </div>
+                <div class="hobbies">
+                  <p class="name">Hobbies</p>
+                  <p>Play Sports</p>
+                  <p>Reading</p>
+                  <p>Swimming</p>
+                  <p>Traveling</p>
+                </div>
+              </div>
+              <div class="educational-background" id="edu_background">
+                <p class="name">Education</p>
+                <div class="education-content">
+                  <div class="school-info">
+                   <p class="left-name">Noble High School</p>
+                   <p>2015-2016</p> 
+                  </div>
+                  <div class="marks-info">
+                    <p class="right-name">10 <sup>th</sup></p>
+                    <p class="edu-desc">87.6 &percnt;</p>
+                  </div>
+                  <div class="school-info">
+                    <p class="left-name">B.A.P.S. Swaminarayan Vidhyamandir Gondal</p>
+                    <p>2016-2018</p> 
+                  </div>
+                  <div class="marks-info">
+                    <p class="right-name">12 <sup>th</sup></p>
+                    <p class="edu-desc">87.3 &percnt;</p>
+                  </div>
+                  <div class="school-info">
+                    <p class="left-name">GEC-Gnadhinagar</p>
+                    <p>2018-2022</p> 
+                  </div>
+                  <div class="marks-info">
+                    <p class="right-name">BE(IT)</p>
+                    <p class="edu-desc">8.34 CGPA</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills" id="skill_display" >
+                <div class="skill-content">
+                  <p class="name">Skills</p>
+                  <div class="professional-skill">
+                    <p>C &amp; C++</p>
+                    <p>JAVASCRIPT </p>
+                    <p>NODE JS</p>
+                    <p>REACT JS</p> 
+                    <p>HTML5 & CSS3</p>
+                    <p>SQL, MYSQL</p>
+                    <p>GIT & GITHUB</p>
+                    <p>MONGODB</p>
+                  </div>
+                  <p class="name">Soft-Skills</p>
+                  <div class="soft-skill">
+                    <p>SELF LERNER</p>
+                    <p>TIME MANAGEMENT</p>
+                    <p>CRITICAL THINKING</p>
+                    <p>PROBLEM SLOVING</p>
+                    <p>COMMUNICATION</p>
+                    <p>TEAMWORK</p>
+                  </div>
+                </div>
+              </div>
+              <div class="experience" id="exp">
+                <p class="name">Internship</p>
+                <div class="exp-content">
+                  <div class="compnay-info">
+                    <p class="left-name">Creart</p>
+                    <p>15-dec-2020 to 7-jan-2021</p>
+                  </div>
+                  <div class="exp-info">
+                    <p class="right-name">PHP Summer Internship</p>
+                    <p class="exp-desc">
+                      It is fifteen days summer internsheep where i learn about how we can build a single page web app in php 
+                      and also learn about one of the frame of php called laravel. I leran how mvc system work during project creation.
+                    </p>
+                  </div>
+                  <div class="compnay-info">
+                    <p class="left-name">Unnati Informatics LLP.</p>
+                    <p>1-jan-2022 to 30-apr-2022</p>
+                  </div>
+                  <div class="exp-info">
+                    <p class="right-name">MERN Stack Internship</p>
+                    <p class="exp-desc">
+                      During this internship i worked on project named model united nation in mern technology. 
+                      I developed frontend with react and backend with nodejs and managed database with mongodb.
+                    </p>
+                  </div>
+                </div>
+                <p class="name">Project</p>
+                <div class="exp-content">
+                  <div class="compnay-info">
+                    <p class="left-name">Weather App</p>
+                  </div>
+                  <div class="exp-info">
+                    <p class="exp-desc">
+                      Dynamic project thats take a city name from user and display weather condition and temperature 
+                      of that city form databse through APIS.
+                    </p>
+                  </div>
+                  <div class="compnay-info">
+                    <p class="left-name">News App</p>
+                  </div>
+                  <div class="exp-info">
+                    <p class="exp-desc">
+                      Dynamic project thats shows daily news catagory wise.
+                    </p>
+                  </div>
+                  <div class="compnay-info">
+                    <p class="left-name">Text Utils App</p>
+                  </div>
+                  <div class="exp-info">
+                    <p class="exp-desc">
+                      It's convert text as per user requirement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+  </body>
+</html>

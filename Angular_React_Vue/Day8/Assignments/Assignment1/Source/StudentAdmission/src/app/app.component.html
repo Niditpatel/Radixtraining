@@ -1,0 +1,550 @@
+<div class="h-full w-full p-3  bg-black ">
+    <div class="border bg-blue-50 rounded-xl">
+        <form [formGroup]="StudentForm">
+            <div class=" p-4">
+                <h1 class="text-4xl mb-5">Your Detail</h1>
+                <div class="border rounded-xl bg-gradient-to-r from-blue-400  to-blue-100 px-2 my-2">
+                    <h1 class="text-2xl">FullName</h1>
+                    <div formGroupName="Name"
+                        class="flex  space-x-8 px-3 my-3 border bg-gradient-to-l from-blue-400  to-blue-100 rounded-xl">
+                        <span>
+                            <label class="text-gray-700 text-xl ">First Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Your Name" formControlName="FirstName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Your Name</label>
+                            </div>
+                            <app-errors [field]="Fname"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Middle Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="father Name" formControlName="MiddleName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Father Name</label>
+                            </div>
+                            <app-errors [field]="Mname"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Last Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Surname" formControlName="LastName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Surname</label>
+                            </div>
+                            <app-errors [field]="Lname"></app-errors>
+                        </span>
+                    </div>
+                </div>
+                <div class="border bg-gradient-to-r from-blue-400  to-blue-100 rounded-xl my-2 px-2">
+                    <h1 class="text-2xl">Birth Details</h1>
+                    <div class="my-3 px-3 flex space-x-8 border rounded-xl bg-gradient-to-l from-blue-400  to-blue-100"
+                        formGroupName="BirthDetail">
+                        <span>
+
+                            <label for="dob" class="capitalize text-xl">date of birth : </label><br>
+                            <div class="datepicker relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Select a date" onfocus="(this.type='date')" formControlName="DOB" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">birth date</label>
+                            </div>
+                            <app-errors [field]="dob"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Place Of Birth : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="PlaceOfBirth" formControlName="PlaceOfBirth" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Birth Place</label>
+                            </div>
+                            <app-errors [field]="placeofbirth"></app-errors>
+                        </span>
+                    </div>
+                </div>
+                <div class="border rounded-xl bg-gradient-to-r from-blue-400  to-blue-100 px-2 my-2">
+                    <h1 class="text-2xl">Languages</h1>
+                    <div formGroupName="Languages"
+                        class="flex  space-x-8 px-3 border bg-gradient-to-l from-blue-400  to-blue-100  rounded-xl my-3">
+                        <span>
+                            <label class="text-gray-700 text-xl ">First Language :</label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="FirstLanguage" formControlName="FirstLanguage" />
+                                <label for="floatingInput" class="text-gray-700 capitalize text-sm">ex. Hindi,Eng or
+                                    etc.</label>
+                            </div>
+                            <app-errors [field]="Flang"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Second Language :</label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="SecondLanguage" formControlName="SecondLanguage" />
+                                <label for="floatingInput" class="text-gray-700 capitalize text-sm">ex. Hindi,Eng or
+                                    etc.</label>
+                            </div>
+                            <app-errors [field]="Slang"></app-errors>
+                        </span>
+                    </div>
+                </div>
+                <div class="border rounded-xl bg-gradient-to-r from-blue-400  to-blue-100 px-2 my-2">
+                    <h1 class="text-2xl">Address</h1>
+                    <div formGroupName="Address"
+                        class="flex  space-x-8 px-3 border rounded-xl bg-gradient-to-l from-blue-400  to-blue-100 my-3">
+                        <span>
+                            <label class="text-gray-700 text-xl ">City :</label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="City" formControlName="City" />
+                                <label for="floatingInput" class="text-gray-700 capitalize text-sm">Enter City here
+                                    ..</label>
+                            </div>
+                            <app-errors [field]="Acity"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">State :</label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="State" formControlName="State" />
+                                <label for="floatingInput" class="text-gray-700 capitalize text-sm">Enter State here
+                                    ..</label>
+                            </div>
+                            <app-errors [field]="AState"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Country :</label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Country" formControlName="Country" />
+                                <label for="floatingInput" class="text-gray-700 capitalize text-sm">Enter Country here
+                                    ..</label>
+                            </div>
+                            <app-errors [field]="Acountry"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">PIN :</label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="postal code" formControlName="PIN" />
+                                <label for="floatingInput" class="text-gray-700 capitalize text-sm">Enter Postal Code
+                                    here
+                                    ..</label>
+                            </div>
+                            <app-errors [field]="Apin"></app-errors>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3" formGroupName="Father">
+                <h1 class="text-4xl">Father Detail</h1>
+                <div class="border  bg-gradient-to-r from-blue-400  to-blue-100 my-2 px-3 rounded-xl">
+                    <h1 class="text-2xl">FullName</h1>
+                    <div formGroupName="FullName"
+                        class="flex  space-x-8 px-3 my-3 border rounded-xl  bg-gradient-to-l from-blue-400  to-blue-100">
+                        <span>
+                            <label class="text-gray-700 text-xl ">First Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Your Name" formControlName="FirstName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Father Name</label>
+                            </div>
+                            <app-errors [field]="Ffname"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Middle Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="father Name" formControlName="MiddleName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">GradFather Name</label>
+                            </div>
+                            <app-errors [field]="Fmname"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Last Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Surname" formControlName="LastName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Surname</label>
+                            </div>
+                            <app-errors [field]="Flname"></app-errors>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="border bg-gradient-to-r from-blue-400 to-blue-100 px-3 rounded-xl">
+                    <h1 class="text-2xl">Additional</h1>
+                    <div class="flex space-x-8 my-2 border bg-gradient-to-l from-blue-400 to-blue-100 rounded-xl px-3">
+                        <span>
+                            <label class="text-gray-700 text-xl ">Education Qualification : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="EducationQualification" formControlName="EducationQualification" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">Father's
+                                    qalification</label>
+                            </div>
+                            <app-errors [field]="Fedqul"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Profession : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Profession" formControlName="Profession" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">Father's
+                                    Work</label>
+                            </div>
+                            <app-errors [field]="Fprofession"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Designation : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Designation" formControlName="Designation" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">Father's Post On
+                                    Work</label>
+                            </div>
+                            <app-errors [field]="FDesignation"></app-errors>
+                        </span>
+                    </div>
+                </div>
+                <div class="border bg-gradient-to-r from-blue-400 to-blue-100 px-3 rounded-xl my-2">
+                    <h1 class="text-2xl">Contact </h1>
+                    <div class="flex space-x-8 border bg-gradient-to-l from-blue-400 to-blue-100 rounded-xl px-3 my-2">
+                        <span>
+                            <label class="text-gray-700 text-xl ">Phone : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="number"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Phone" formControlName="Phone" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">Phone
+                                    No.</label>
+                            </div>
+                            <app-errors [field]="Fphone"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Email : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="email"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Surname" formControlName="Email" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize"> ex.
+                                    .....@gmail.com</label>
+                            </div>
+                            <app-errors [field]="Femail"></app-errors>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3" formGroupName="Mother">
+                <h1 class="text-4xl">Mother Detail</h1>
+                <div class="border  bg-gradient-to-r from-blue-400  to-blue-100 my-2 px-3 rounded-xl">
+                    <h1 class="text-2xl">FullName</h1>
+                    <div formGroupName="FullName"
+                        class="flex  space-x-8 px-3 my-3 border rounded-xl  bg-gradient-to-l from-blue-400  to-blue-100">
+                        <span>
+                            <label class="text-gray-700 text-xl ">First Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Your Name" formControlName="FirstName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Mother Name</label>
+                            </div>
+                            <app-errors [field]="Mfname"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Middle Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="father Name" formControlName="MiddleName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Father Name</label>
+                            </div>
+                            <app-errors [field]="Mmname"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Last Name : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Surname" formControlName="LastName" />
+                                <label for="floatingInput" class="text-gray-700 text-sm">Surname</label>
+                            </div>
+                            <app-errors [field]="Mlname"></app-errors>
+                        </span>
+                    </div>
+                </div>
+                <div class="border bg-gradient-to-r from-blue-400 to-blue-100 px-3 rounded-xl">
+                    <h1 class="text-2xl">Additional</h1>
+                    <div class="flex space-x-8 my-2 border bg-gradient-to-l from-blue-400 to-blue-100 rounded-xl px-3">
+                        <span>
+                            <label class="text-gray-700 text-xl ">Education Qualification : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="EducationQualification" formControlName="EducationQualification" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">Mother's
+                                    qalification</label>
+                            </div>
+                            <app-errors [field]="Medqul"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Profession : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Profession" formControlName="Profession" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">Mother's
+                                    Work</label>
+                            </div>
+                            <app-errors [field]="Mprofession"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Designation : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="text"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Designation" formControlName="Designation" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">Mother's Post On
+                                    Work</label>
+                            </div>
+                            <app-errors [field]="MDesignation"></app-errors>
+                        </span>
+                    </div>
+                </div>
+                <div class="border bg-gradient-to-r from-blue-400 to-blue-100 px-3 rounded-xl my-2">
+                    <h1 class="text-2xl">Contact </h1>
+                    <div class="flex space-x-8 border bg-gradient-to-l from-blue-400 to-blue-100 rounded-xl px-3 my-2">
+                        <span>
+                            <label class="text-gray-700 text-xl ">Phone : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="number"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Phone" formControlName="Phone" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize">Phone
+                                    No.</label>
+                            </div>
+                            <app-errors [field]="Mphone"></app-errors>
+                        </span>
+                        <span>
+                            <label class="text-gray-700 text-xl ">Email : </label>
+                            <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                <input type="email"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    placeholder="Surname" formControlName="Email" />
+                                <label for="floatingInput" class="text-gray-700 text-sm capitalize"> ex.
+                                    .....@gmail.com</label>
+                            </div>
+                            <app-errors [field]="Memail"></app-errors>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div formGroupName="Emergency" class="px-3 my-2">
+                <h1 class="text-4xl">Emergency</h1>
+                <div formArrayName="EmergencyContact"
+                    class="border rounded-xl bg-gradient-to-r from-blue-400 to-blue-100 px-3 my-2 ">
+                    <h1 class="text-2xl capitalize ">contact with phone number</h1>
+                    <div *ngFor="let item of EmergencyList.controls; let i = index">
+                        <div [formGroupName]="i"
+                            class="flex space-x-8 border rounded-xl bg-gradient-to-l from-blue-400 to-blue-100 px-3 my-2">
+                            <span>
+                                <label class="text-gray-700 text-xl ">Relation : </label>
+                                <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                    <input type="text"
+                                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                        placeholder="Relation" formControlName="Relation" />
+                                    <label for="floatingInput" class="text-gray-700 text-sm capitalize">
+                                        relation with person</label>
+                                </div>
+                                <app-errors [field]="Emergency.controls[i].controls.Relation"></app-errors>
+                            </span>
+                            <span>
+                                <label class="text-gray-700 text-xl ">Phone : </label>
+                                <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                    <input type="number"
+                                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                        placeholder="Number" formControlName="Number" />
+                                    <label for="floatingInput" class="text-gray-700 text-sm capitalize">
+                                        contact number</label>
+                                </div>
+                                <app-errors [field]="Emergency.controls[i].controls.Number"></app-errors>
+                            </span>
+                            <span *ngIf="EmergencyList.controls.length > 1 && i>0">
+                                <button class="text-6xl mt-8 content-center" (click)="DeleteEmergency(i)"><em
+                                        class="fa-solid fa-minus"></em></button>
+                            </span>
+                        </div>
+                    </div>
+                    <span>
+                        <button class="text-4xl" (click)="AddEmergency()"><em class="fa-solid fa-plus"></em></button>
+                    </span>
+                </div>
+            </div>
+            <div formGroupName="Reference" class="px-3 my-2">
+                <h1 class="text-4xl">Reference</h1>
+                <div formArrayName="ReferenceContact"
+                    class="border rounded-xl bg-gradient-to-r from-blue-400 to-blue-100 px-3 my-2 ">
+                    <h1 class="text-2xl capitalize ">reference with adress and contact number</h1>
+                    <div *ngFor="let item of ReferenceList.controls; let i = index">
+                        <div [formGroupName]="i"
+                            class="flex space-x-8 border rounded-xl bg-gradient-to-l from-blue-400 to-blue-100 px-3 my-2">
+                            <span>
+                                <label class="text-gray-700 text-xl ">Address : </label>
+                                <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                    <input type="text"
+                                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                        placeholder="Address" formControlName="Address" />
+                                    <label for="floatingInput" class="text-gray-700 text-sm capitalize">
+                                        Address of Person</label>
+                                </div>
+                                <app-errors [field]="Reference.controls[i].controls.Address"></app-errors>
+                            </span>
+                            <span>
+                                <label class="text-gray-700 text-xl ">Phone : </label>
+                                <div class="relative form-floating mb-3 mt-2 xl:w-96">
+                                    <input type="number"
+                                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                        placeholder="Number" formControlName="Number" />
+                                    <label for="floatingInput" class="text-gray-700 text-sm capitalize">
+                                        contact number</label>
+                                </div>
+                                <app-errors [field]="Reference.controls[i].controls.Number"></app-errors>
+                            </span>
+                            <span *ngIf="ReferenceList.controls.length > 1 && i>0">
+                                <button class="text-6xl mt-8 content-center" (click)="DeleteReference(i)"><em
+                                        class="fa-solid fa-minus"></em></button>
+                            </span>
+                        </div>
+                    </div>
+                    <span>
+                        <button class="text-4xl" (click)="AddReference()"><em class="fa-solid fa-plus"></em></button>
+                    </span>
+                </div>
+            </div>
+        </form>
+        <div class="w-fit px-3">
+            <button (click)="submitdata(StudentForm.value)" [disabled]="!StudentForm.valid"
+                class=" text-xl border rounded-xl px-5 my-1"
+                [ngClass]="[!StudentForm.valid ?'bg-gray-400':'bg-green-400']">
+                Submit Form
+            </button>
+        </div>
+    </div>
+    <div class="bg-gray-100 my-6 px-2">
+        <table class="table table-auto border border-collapse">
+            <caption class="text-3xl my-3">Student Data </caption>
+            <thead>
+                <tr class=" bg-gray-400">
+                    <th class="border border-black p-2">Name</th>
+                    <th class="border border-black p-2">Birth Date</th>
+                    <th class="border border-black p-2">Place Of Birth</th>
+                    <th class="border border-black p-2">Languages</th>
+                    <th class="border border-black p-2">Address</th>
+                    <th class="border border-black p-2">Emergency </th>
+                    <th class="border border-black p-2">Reference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border border-black " *ngIf="studentdata.length < 1 ; else ElseBlock ">
+                    <td colspan="21" class="text-center capitalize"> there is no Data to show</td>
+                </tr>
+                <ng-template #ElseBlock>
+                    <tr class="even:bg-gray-200" *ngFor="let item of studentdata">
+                        <td class="border border-black p-1">
+                            {{item.Name.FirstName}}&nbsp;{{item.Name.MiddleName}}&nbsp;{{item.Name.LastName}}</td>
+                        <td class="border border-black p-1">{{item.BirthDetail.DOB}}</td>
+                        <td class="border border-black p-1">{{item.BirthDetail.PlaceOfBirth}}</td>
+                        <td class="border border-black p-1">
+                            First:{{item.Languages.FirstLanguage}},Sec:{{item.Languages.SecondLanguage}}</td>
+                        <td class="border border-black p-1">
+                            {{item.Address.City}},{{item.Address.State}},{{item.Address.Country}},{{item.Address.PIN}}.
+                        </td>
+                        
+                        <td class="border border-black p-1">{{item.Emergency.EmergencyContact | json}}</td>
+                        <td class="border border-black p-1">{{item.Reference.ReferenceContact | json}}</td>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+    </div>
+    <div class="bg-gray-100 my-6 px-2">
+        <table class="border border-collapse">
+            <caption class="text-3xl my-3">Father's Detail </caption>
+            <thead>
+                <tr class=" bg-gray-400">
+                    <th class="border border-black p-2">Name</th>
+                    <th class="border border-black p-2">Education Qualification</th>
+                    <th class="border border-black p-2">Work</th>
+                    <th class="border border-black p-2">Designation At Work</th>
+                    <th class="border border-black p-2">EMail</th>
+                    <th class="border border-black p-2">Contact Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border border-black " *ngIf="studentdata.length < 1 ; else FElseBlock ">
+                    <td colspan="21" class="text-center capitalize"> there is no Data to show</td>
+                </tr>
+                <ng-template #FElseBlock>
+                    <tr class="even:bg-gray-200" *ngFor="let item of studentdata">
+                        <td class="border border-black p-1">
+                            {{item.Father.FullName.FirstName}}&nbsp;{{item.Father.FullName.MiddleName}}&nbsp;{{item.Father.FullName.LastName}}
+                        </td>
+                        <td class="border border-black p-1">{{item.Father.EducationQualification}}</td>
+                        <td class="border border-black p-1">{{item.Father.Profession}}</td>
+                        <td class="border border-black p-1">{{item.Father.Designation}}</td>
+                        <td class="border border-black p-1">{{item.Father.Email}}</td>
+                        <td class="border border-black p-1">{{item.Father.Phone}}</td>
+                    </tr>
+                 </ng-template>
+            </tbody>
+        </table>
+    </div>  
+    <div class="bg-gray-100 my-6 px-2">
+        <table class="border border-collapse">
+            <caption class="text-3xl my-3">Mother's Detail </caption>
+            <thead>
+                <tr class=" bg-gray-400">
+                    <th class="border border-black p-2">Name</th>
+                    <th class="border border-black p-2">Education Qualification</th>
+                    <th class="border border-black p-2">Work</th>
+                    <th class="border border-black p-2">Designation At Work</th>
+                    <th class="border border-black p-2">EMail</th>
+                    <th class="border border-black p-2">Contact Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border border-black " *ngIf="studentdata.length < 1 ; else MElseBlock ">
+                    <td colspan="21" class="text-center capitalize"> there is no Data to show</td>
+                </tr>
+                <ng-template #MElseBlock>
+                    <tr class="even:bg-gray-200" *ngFor="let item of studentdata">
+                        <td class="border border-black p-1">
+                            {{item.Mother.FullName.FirstName}}&nbsp;{{item.Mother.FullName.MiddleName}}&nbsp;{{item.Mother.FullName.LastName}}
+                        </td>
+                        <td class="border border-black p-1">{{item.Mother.EducationQualification}}</td>
+                        <td class="border border-black p-1">{{item.Mother.Profession}}</td>
+                        <td class="border border-black p-1">{{item.Mother.Designation}}</td>
+                        <td class="border border-black p-1">{{item.Mother.Email}}</td>
+                        <td class="border border-black p-1">{{item.Mother.Phone}}</td>
+                    </tr>
+                 </ng-template>
+            </tbody>
+        </table>
+    </div>  
+</div>

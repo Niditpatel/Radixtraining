@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+                <label for="inpBase">Enter Base of Triangle</label>
+                <input type="text" class="border form-control mb-5" name="" id="inpBase"><br>
+                <label for="inpHeight">Enter Height of Triangle</label><br>
+                <input type="text" class="border form-control mb-5" name="" id="inpHeight"><br>
+                <label for="AreaTriangle">Output</label><br>
+                <input type="text" class="border form-control mb-5" id="AreaTriangle" readonly></input>
+                <button type="button" onclick="displayArea()"
+                    class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                    Find Area
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function displayArea() {
+            var b = parseFloat(document.getElementById('inpBase').value);
+            var h = parseFloat(document.getElementById('inpHeight').value);
+            if (isNaN(b) || isNaN(h)) {
+                document.getElementById('AreaTriangle').value = "invalid input";
+            } else {
+                // call before function declared 
+                document.getElementById('AreaTriangle').value = myFunction(b,h).toFixed(2);
+                function myFunction(a,b) {
+                    return (a * b)/2;
+                }
+            }
+        }     
+    </script>
+</body>
+
+</html>

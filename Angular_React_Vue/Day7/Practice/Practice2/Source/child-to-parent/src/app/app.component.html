@@ -1,0 +1,5 @@
+<div class="mx-auto mt-[100px] h-[30px] w-fit ">
+    <h1 class="capitalize mb-4 text-2xl">Child to parent </h1>
+    <app-profile (display)=show($event)></app-profile>
+    <h1 *ngIf="Name" class="capitalize"> Hello  {{Name}}</h1>
+</div>

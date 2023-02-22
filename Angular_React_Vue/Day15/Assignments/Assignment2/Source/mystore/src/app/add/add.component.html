@@ -1,0 +1,22 @@
+<div class="bg-gray-100 p-5 w-fit mx-auto">
+    <h1 class="text-2xl text-center">Add Product</h1>
+    <div class="my-3">
+        <label for="id">id : </label><br>
+        <input class="border border-black" type="number" [(ngModel)]="id" name="" id="">
+    </div>
+    <div class="my-3">
+        <label>Name : </label><br>
+        <input class="border border-black" type="text" name="" [(ngModel)]="name" id="">
+    </div>
+    <div class="my-3">
+        <label for="price">Price : </label><br>
+        <input class="border border-black" type="number" [(ngModel)]="price" name="" id="">
+    </div>
+    <div class="my-3">
+        <label for="img">Image : </label><br>
+        <input class="border border-black" type="text" [(ngModel)]="img" name="" id="">
+    </div>
+    <div class="my-3">
+        <button class="border rounded-xl px-5 py-1 bg-gray-500 text-white" (click)="addproduct()">Add</button>
+    </div>
+</div>

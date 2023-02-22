@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+                <label for="inpWidth">Enter Width of Rectangle</label>
+                <input type="text" class="border form-control mb-5" name="" id="inpWidth"><br>
+                <label for="inpLength">Enter Length of Rectangle</label><br>
+                <input type="text" class="border form-control mb-5" name="" id="inpLength"><br>
+                <label for="AreaRectangle">Output</label><br>
+                <input type="text" class="border form-control mb-5" id="AreaRectangle" readonly></input>
+                <button type="button" onclick="displayArea()"
+                    class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                    Find Area
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function displayArea() {
+            var w = parseFloat(document.getElementById('inpWidth').value);
+            var l = parseFloat(document.getElementById('inpLength').value);
+            if (isNaN(w) || isNaN(l)) {
+                document.getElementById('AreaRectangle').value = "invalid input";
+            } else {
+                const myFunction = new Function("a", "b", "return a * b");
+                document.getElementById('AreaRectangle').value = myFunction(w,l).toFixed(2);
+            }
+        }     
+    </script>
+</body>
+
+</html>

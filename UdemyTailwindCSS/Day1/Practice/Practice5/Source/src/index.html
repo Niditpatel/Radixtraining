@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../dist/output.css">
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <!-- BORDER  -->
+      <p class="text-3xl text-center my-8 py-4 border-2 border-cyan-500">
+        BORDER
+      </p>
+
+      <!-- border radius  -->
+      <p class="text-2xl my-4">Border Radius</p>
+      <div class="rounded-none p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div class="rounded-sm p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div class="rounded p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div class="rounded-md p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div class="rounded-lg p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div class="rounded-xl p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div class="rounded-3xl p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div class="rounded-full p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div class="rounded-t-full p-5 bg-rose-300 w-1/6 h-48 mb-5"></div>
+      <div
+        class="
+          rounded-tr-xl
+          p-5
+          bg-rose-300
+          w-1/6
+          h-48
+          mb-5
+          hover:rounded-bl-xl
+        "
+      ></div>
+
+      <p class="font-light my-2">
+        For Side use rounded-{side}-value(sm,md,full,xl,4xl,none....)
+      </p>
+
+      <!-- border-width -->
+      <p class="text-2xl my-4">Border Width</p>
+      <div class="border border-indigo-600 mb-3 w-1/5 h-24"></div>
+      <div class="border-2 border-indigo-600 mb-3 w-1/5 h-24"></div>
+      <div class="border-4 border-indigo-600 mb-3 w-1/5 h-24"></div>
+      <div class="border-8 border-indigo-600 mb-3 w-1/5 h-24"></div>
+      <div class="border-t-8 border-indigo-600 mb-3 w-1/5 h-24"></div>
+      <div class="border-x-4 border-indigo-600 mb-3 w-1/5 h-24"></div>
+      <div class="border-y-2 border-indigo-600 mb-3 w-1/5 h-24"></div>
+
+      <!-- Border color  -->
+      <p class="text-2xl my-4">Border Color</p>
+      <p class="font-light my-2">
+        Use border In place of text In text color Property
+      </p>
+
+      <!-- border style  -->
+      <p class="text-2xl my-4">Border Style</p>
+      <div class="border-solid border-2 border-indigo-600 w-min p-2 mb-2">
+        Solid
+      </div>
+      <div class="border-dashed border-2 border-indigo-600 w-min p-2 mb-2">
+        Dashed
+      </div>
+      <div class="border-dotted border-2 border-indigo-600 w-min p-2 mb-2">
+        Dotted
+      </div>
+      <div class="border-double border-4 border-indigo-600 w-min p-2 mb-2">
+        Double
+      </div>
+
+      <!-- devide width  -->
+      <p class="text-2xl my-4">Devide width</p>
+      <div class="grid grid-cols-3 divide-x border mb-3">
+        <div class="p-3">01</div>
+        <div class="p-3">02</div>
+        <div class="p-3">03</div>
+      </div>
+      <div class="grid grid-cols-1 divide-y-4 border">
+        <div class="p-3">01</div>
+        <div class="p-3">02</div>
+        <div class="p-3">03</div>
+      </div>
+      <p class="font-light my-2">
+        Add borders between horizontal elements using the divide-x-{width}
+        utilities and divide-y-{width} for vertical use devide-x or y- reverse
+        for reverse child order.
+      </p>
+
+      <!-- Devide color  -->
+      <p class="text-2xl my-4">Devide Color</p>
+      <div class="divide-y divide-blue-200 border">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+      </div>
+      <p class="font-light my-2">
+        Control the border color between elements using the divide-{color}-value
+        utilities.
+      </p>
+
+      <!-- Devide style  -->
+      <p class="text-2xl my-4">Devide Style</p>
+      <div class="divide-y-4 devide-indigo-500 divide-dashed border">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+      </div>
+      <p class="font-light my-2">
+        Control the border style between elements using the divide-{style}
+        utilities.
+      </p>
+
+      <!-- outline  -->
+      <p class="text-2xl my-4">Outline Width</p>
+      <button class="outline outline-offset-2 outline-1 w-max">Button A</button>
+      <button class="outline outline-offset-2 outline-2 w-max ml-2">
+        Button B
+      </button>
+      <button class="outline outline-offset-2 outline-4 w-max ml-2">
+        Button C
+      </button>
+      <p class="font-light my-2">
+        Use the outline-{width} utilities to change the width of an element’s
+        outline.
+      </p>
+
+      <!-- outline color  -->
+      <p class="text-2xl my-4">Outline color</p>
+      <button
+        class="outline outline-offset-2 outline-1 outline-indigo-200 w-max"
+      >
+        Button A
+      </button>
+      <button
+        class="outline outline-offset-2 outline-2 outline-rore-500 w-max ml-2"
+      >
+        Button B
+      </button>
+      <button
+        class="outline outline-offset-2 outline-4 w-max outline-sky-600 ml-2"
+      >
+        Button C
+      </button>
+      <p class="font-light my-2">
+        Use the outline-{color}-value utilities to change the width of an
+        element’s outline and for changing opacity use
+        outline-{color}-value/[0-to1]
+      </p>
+
+      <!-- outline style  -->
+      <p class="text-2xl my-4">Outline Style</p>
+      <button class="outline-dashed outline-offset-2 outline-1 w-max">
+        Button A
+      </button>
+      <button class="outline-dotted outline-offset-2 outline-1 w-max ml-2">
+        Button B
+      </button>
+      <button class="outline-double outline-offset-2 outline-4 w-max ml-2">
+        Button C
+      </button>
+      <p class="font-light my-2">
+        Use the outline-{style} utilities to change the width of an element’s
+        outline.
+      </p>
+
+      <!-- outline offset  -->
+      <p class="text-2xl my-4">Outline Offset</p>
+      <button class="outline outline-offset-0 ml-4 border border-indigo-500">
+        Button A
+      </button>
+      <button class="outline outline-offset-2 ml-4 border border-indigo-500">
+        Button B
+      </button>
+      <button class="outline outline-offset-4 ml-4 border border-indigo-500">
+        Button C
+      </button>
+      <p class="font-light my-2">
+        Use the outline-{offset} utilities to change the offset of an element’s
+        outline.
+      </p>
+
+      <!-- Ring Width  -->
+      <p class="text-2xl my-4">Ring Width</p>
+      <p class="font-thin my-3">
+        it's apply solid box shadow of a specific thickness to a element.
+      </p>
+      <button class="ml-4 border ring-offset-1 ring-2">Button A</button>
+      <button class="ml-4 border ring-offset-1 ring">Button B</button>
+      <button class="ml-4 border ring-offset-1 ring-4">Button C</button>
+
+      <!-- Ring Color  -->
+      <p class="text-2xl my-4">Ring Color</p>
+      <p class="font-thin">
+        Use the ring-{color} utilities to set the color of an outline ring.
+      </p>
+      <button class="border ring-2 ring-blue-500">Create account</button>
+
+      <!-- Ring offset Width  -->
+      <p class="text-2xl my-4">Ring offset Width</p>
+      <p class="font-thin my-2">
+        it is same as the outline offset but it's apply on ring use
+        ring-offset-value(0,1,2,4,8)
+      </p>
+
+      <!-- ring offse3t Color  -->
+      <p class="text-2xl my-4">Ring Offset Color</p>
+      <button class="ring-2 ring-purple-500 ring-offset-4 ring-offset-blue-300">
+        Save Changes
+      </button>
+    </div>
+  </body>
+</html>
